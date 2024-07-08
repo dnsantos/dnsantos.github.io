@@ -6,17 +6,17 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #f5f5f5;
+    background-color: #fff;
 }
 
 /* Estilo do cabeçalho e navegação */
 .header {
-    background-color: #ffffff;
-    padding: 20px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f8f8;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .navbar {
@@ -37,35 +37,36 @@ body {
 
 .nav-links {
     list-style: none;
+    display: flex;
 }
 
 .nav-links li {
-    display: inline;
     margin-left: 20px;
 }
 
 .nav-links a {
     color: #333;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    padding: 5px 10px;
 }
 
 .nav-links a:hover {
-    color: #007BFF;
+    background-color: #e0e0e0;
+    border-radius: 5px;
 }
 
 /* Estilo das seções */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .home-section {
-    text-align: center;
-    background-color: #007BFF;
-    color: #fff;
-    padding: 100px 20px;
+    background-color: #f0f0f5;
+    padding: 120px 20px;
 }
 
 .home-section h1 {
@@ -88,14 +89,17 @@ section {
 
 .sobre-section p, .servicos-section ul {
     font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .servicos-section ul {
     list-style: none;
+    padding: 0;
 }
 
 .servicos-section ul li {
-    background-color: #f5f5f5;
+    background-color: #f8f8f8;
     margin-bottom: 10px;
     padding: 10px;
     border-radius: 5px;
@@ -103,14 +107,13 @@ section {
 
 /* Estilo do rodapé */
 .footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+    background-color: #f8f8f8;
     padding: 40px 20px;
+    border-top: 1px solid #e0e0e0;
 }
 
 .footer a {
-    color: #007BFF;
+    color: #0073e6;
     text-decoration: none;
 }
 
