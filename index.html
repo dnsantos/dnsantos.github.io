@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Deivid Santos | Modern Workplace e gestão de dispositivos Apple</title>
-  <meta name="description" content="Deivid Santos é especialista em gestão de dispositivos Apple (Jamf Pro, Intune, Apple Business Manager, Platform SSO) com mais de sete anos em ambientes corporativos. Autor de tutoriais em português sobre Modern Workplace.">
+  <meta name="description" content="Tutoriais em português sobre MDM, Jamf Pro, infraestrutura como código e experiência do colaborador em frotas Apple corporativas, escritos por Deivid Santos, especialista com mais de sete anos em ambientes corporativos de grande porte.">
   <meta name="author" content="Deivid Santos">
-  <meta name="theme-color" content="#0b1322" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#fbfcfd" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#060a14" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f6f8fd" media="(prefers-color-scheme: light)">
   <link rel="canonical" href="https://deividsantos.com.br/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
@@ -16,7 +16,7 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Deivid Santos">
   <meta property="og:title" content="Deivid Santos | Modern Workplace e gestão de dispositivos Apple">
-  <meta property="og:description" content="Gestão, segurança e experiência do colaborador em frotas Apple corporativas. Tutoriais em português sobre MDM, Jamf Pro, IaC e DEX.">
+  <meta property="og:description" content="Gestão de dispositivos Apple, em português e na prática: tutoriais sobre MDM, Jamf Pro, infraestrutura como código e DEX.">
   <meta property="og:url" content="https://deividsantos.com.br/">
   <meta property="og:image" content="https://deividsantos.com.br/og.png">
   <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://deividsantos.com.br/og.png">
 
-  <link rel="preload" href="/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/sora-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/public-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/style.css">
 
@@ -42,7 +42,7 @@
       "name": "Deivid Santos",
       "url": "https://deividsantos.com.br/",
       "jobTitle": "Especialista em Modern Workplace e gestão de dispositivos Apple",
-      "description": "Especialista em gestão de dispositivos Apple com mais de sete anos de experiência em ambientes corporativos de grande porte, com foco em segurança, automação e conformidade.",
+      "description": "Especialista em gestão de dispositivos Apple com mais de sete anos de experiência em ambientes corporativos de grande porte, com foco em segurança, automação e conformidade. Autor do Aprenda Modern Workplace, tutoriais em português sobre MDM, Jamf Pro, infraestrutura como código e DEX.",
       "knowsAbout": [
         "Gerenciamento de dispositivos Apple",
         "MDM",
@@ -67,72 +67,104 @@
   <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="topo">
-    <a class="marca" href="/" aria-label="Deivid Santos, página inicial">DS<span class="ponto" aria-hidden="true"></span></a>
+    <a class="marca" href="/" aria-label="Deivid Santos, página inicial">Deivid Santos<span class="ponto" aria-hidden="true"></span></a>
     <nav aria-label="Principal">
-      <a href="#atuacao">Atuação</a>
-      <a href="#entregas">Entregas</a>
-      <a href="#escrita">Escrita</a>
+      <a href="#trilhas">Trilhas</a>
+      <a href="#perguntas">Perguntas</a>
+      <a href="#autoria">Autoria</a>
       <a href="#contato">Contato</a>
     </nav>
   </header>
 
   <main id="conteudo">
-    <section class="heroi" aria-labelledby="nome">
-      <h1 id="nome">Deivid Santos<span class="ponto" aria-hidden="true"></span></h1>
-      <p class="destaque">Deixo frotas Apple seguras, padronizadas e agradáveis de usar em empresas grandes.</p>
-      <p class="apoio">Sou especialista em gestão de dispositivos Apple, com mais de sete anos de experiência em ambientes corporativos de grande porte. Atuo onde se encontram gestão (MDM), segurança e experiência do colaborador.</p>
-      <p class="acoes">
-        <a class="botao botao--primario" href="https://learn.deividsantos.com.br/">Ler os tutoriais</a>
-        <a class="botao" href="#contato">Falar comigo</a>
-      </p>
+    <section class="heroi" aria-labelledby="titulo">
+      <div class="campo" aria-hidden="true"></div>
+      <div class="heroi__texto">
+        <h1 id="titulo">Gestão de dispositivos Apple, em português e na prática.</h1>
+        <p class="destaque">Tutoriais sobre MDM, Jamf Pro, infraestrutura como código e experiência do colaborador. Cada lição parte de um problema real de frota e termina no que testar antes de ir para produção.</p>
+        <p class="acoes">
+          <a class="botao botao--primario" href="https://learn.deividsantos.com.br/">Ler os tutoriais</a>
+          <a class="botao" href="https://learn.deividsantos.com.br/roadmap/">Ver o roadmap</a>
+        </p>
+      </div>
     </section>
 
-    <section id="atuacao" class="bloco" aria-labelledby="t-atuacao">
-      <h2 id="t-atuacao">Em que eu atuo</h2>
-      <dl class="linhas">
-        <div>
-          <dt>Gestão de frotas Apple</dt>
-          <dd>Implantação e administração de MDM com Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode e Apple Configurator. Zero-Touch Deployment com Apple Business Manager, com padronização e rastreabilidade de frotas macOS e iOS em escala.</dd>
-        </div>
-        <div>
-          <dt>Identidade e segurança</dt>
-          <dd>Platform SSO e integração com provedores de identidade como Okta e Entra ID. Hardening com os CIS Benchmarks, com o framework MITRE ATT&amp;CK como referência, e projetos de resposta a incidentes e conformidade crítica.</dd>
-        </div>
-        <div>
-          <dt>Automação</dt>
-          <dd>Frameworks e automações em Swift Dialog, Bash, Python, PowerShell e AppleScript, e fluxos low-code com Power Automate e Power Apps no ecossistema Microsoft. O objetivo é reduzir esforço operacional e melhorar a experiência de quem usa.</dd>
-        </div>
-        <div>
-          <dt>Experiência do colaborador</dt>
-          <dd>Onboarding automatizado, jornada do colaborador e indicadores de DEX para conectar tecnologia a ambientes mais produtivos, seguros e sustentáveis.</dd>
-        </div>
-      </dl>
+    <section id="trilhas" class="bloco" aria-labelledby="t-trilhas">
+      <div class="grade">
+        <h2 id="t-trilhas">Cinco trilhas, do básico à operação</h2>
+        <ul class="trilhas">
+          <li>
+            <a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">Fundamentos de MDM e ABM</a>
+            <p>Como o MDM da Apple funciona de ponta a ponta, o que o Apple Business Manager entrega e quando usar cada tipo de enrollment.</p>
+          </li>
+          <li>
+            <a href="https://learn.deividsantos.com.br/jamf-pro/smart-groups-e-extension-attributes/">Jamf Pro na prática</a>
+            <p>Smart Groups, Extension Attributes e scripts escritos para rodar em produção sem surpresas.</p>
+          </li>
+          <li>
+            <a href="https://learn.deividsantos.com.br/iac/iac-para-mdm-por-que-e-por-onde-comecar/">IaC para dispositivos</a>
+            <p>A configuração do MDM tratada como código: Git, pull request, validação automática e promoção entre ambientes.</p>
+          </li>
+          <li>
+            <a href="https://learn.deividsantos.com.br/dex/o-que-e-dex-e-como-medir/">DEX, a experiência do colaborador</a>
+            <p>O que medir para saber se o Mac funciona bem para quem o usa, e como coletar esses sinais respeitando a LGPD.</p>
+          </li>
+          <li>
+            <a href="https://learn.deividsantos.com.br/modern-workplace/mapa-do-modern-workplace-apple/">Modern Workplace</a>
+            <p>Identidade, gestão, segurança e experiência trabalhando juntas, com uma visão geral do Platform SSO.</p>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <section id="entregas" class="bloco" aria-labelledby="t-entregas">
-      <h2 id="t-entregas">O que já entreguei</h2>
-      <ul class="lista">
-        <li>Migrações de ambientes macOS com zero downtime.</li>
-        <li>Processos de onboarding automatizado, do pedido do equipamento ao Mac pronto na mão do colaborador.</li>
-        <li>Projetos de resposta a incidentes e de conformidade crítica em empresas dos segmentos financeiro, mídia e tecnologia.</li>
-      </ul>
-      <p class="nota">Certificações em Jamf e Cisco. Administrador da comunidade Brazil Apple Admins, no Jamf Community, onde profissionais de Apple no Brasil trocam experiência.</p>
+    <section id="perguntas" class="bloco" aria-labelledby="t-perguntas">
+      <div class="grade">
+        <h2 id="t-perguntas">Perguntas que as lições respondem</h2>
+        <ul class="perguntas">
+          <li><a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">O que é MDM e como o macOS e o iOS conversam com ele?</a></li>
+          <li><a href="https://learn.deividsantos.com.br/fundamentos/apple-business-manager-e-ade/">Como o Mac chega à pessoa já configurado, sem o suporte encostar nele?</a></li>
+          <li><a href="https://learn.deividsantos.com.br/iac/pipeline-de-validacao-com-github-actions/">Como validar a configuração do MDM antes de aplicar em produção?</a></li>
+          <li><a href="https://learn.deividsantos.com.br/modern-workplace/platform-sso-visao-geral/">O que precisa estar pronto antes de um piloto de Platform SSO?</a></li>
+        </ul>
+      </div>
     </section>
 
-    <section id="escrita" class="bloco" aria-labelledby="t-escrita">
-      <h2 id="t-escrita">O que eu escrevo</h2>
-      <p>Mantenho o <a href="https://learn.deividsantos.com.br/">Aprenda Modern Workplace</a>, um site de tutoriais em português sobre gestão de dispositivos Apple, com trilhas de MDM, Jamf Pro, infraestrutura como código, DEX e Modern Workplace. Boas lições para começar:</p>
-      <ul class="lista">
-        <li><a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">O que é MDM e como o macOS e o iOS conversam com ele</a></li>
-        <li><a href="https://learn.deividsantos.com.br/iac/iac-para-mdm-por-que-e-por-onde-comecar/">Infraestrutura como código para MDM: por que e por onde começar</a></li>
-        <li><a href="https://learn.deividsantos.com.br/modern-workplace/platform-sso-visao-geral/">Platform SSO no macOS: visão geral, requisitos e como planejar o piloto</a></li>
-      </ul>
+    <section id="autoria" class="bloco" aria-labelledby="t-autoria">
+      <div class="grade">
+        <h2 id="t-autoria">Quem escreve</h2>
+        <div class="autoria">
+          <p class="autoria__texto">Deivid Santos administra frotas Apple corporativas há mais de sete anos, em empresas de grande porte dos segmentos financeiro, mídia e tecnologia. Os tutoriais nascem dessa rotina: migrações de macOS sem downtime, onboarding automatizado, resposta a incidentes e conformidade.</p>
+          <dl class="fatos">
+            <div>
+              <dt>Plataformas</dt>
+              <dd>Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator e Apple Business Manager.</dd>
+            </div>
+            <div>
+              <dt>Identidade e segurança</dt>
+              <dd>Platform SSO, Okta, Entra ID, CIS Benchmarks e MITRE ATT&amp;CK.</dd>
+            </div>
+            <div>
+              <dt>Automação</dt>
+              <dd>Swift Dialog, Bash, Python, PowerShell, AppleScript e Power Automate.</dd>
+            </div>
+            <div>
+              <dt>Comunidade</dt>
+              <dd>Administra a Brazil Apple Admins, no Jamf Community. Certificações Jamf e Cisco.</dd>
+            </div>
+          </dl>
+          <p class="nota">Como o conteúdo é revisado e como sugerir correções: <a href="https://learn.deividsantos.com.br/sobre/">Sobre o site</a>.</p>
+        </div>
+      </div>
     </section>
 
     <section id="contato" class="bloco" aria-labelledby="t-contato">
-      <h2 id="t-contato">Contato</h2>
-      <p>Conversas técnicas, convites para eventos e projetos de gestão de dispositivos Apple são bem-vindos. Escreva com o contexto e o objetivo, que eu respondo assim que possível.</p>
-      <p class="acoes"><a class="botao botao--primario" href="mailto:dnsto@icloud.com">dnsto@icloud.com</a></p>
+      <div class="grade">
+        <h2 id="t-contato">Contato</h2>
+        <div>
+          <p class="contato__texto">Correções, sugestões de tema e convites para eventos: escreva com o contexto e o objetivo, que eu respondo assim que possível.</p>
+          <p class="acoes"><a class="botao botao--primario" href="mailto:dnsto@icloud.com">dnsto@icloud.com</a></p>
+        </div>
+      </div>
     </section>
   </main>
 

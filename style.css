@@ -1,7 +1,7 @@
 @font-face {
-  font-family: 'Bricolage Grotesque';
-  src: url('/fonts/bricolage-grotesque-latin-wght-normal.woff2') format('woff2');
-  font-weight: 200 800;
+  font-family: 'Sora';
+  src: url('/fonts/sora-latin-wght-normal.woff2') format('woff2');
+  font-weight: 100 800;
   font-display: swap;
 }
 
@@ -12,28 +12,37 @@
   font-display: swap;
 }
 
+/* Identidade escura por padrão; variante clara para quem usa o sistema em modo claro. */
 :root {
-  --fundo: #fbfcfd;
-  --texto: #0e1a2b;
-  --suave: #51627a;
-  --linha: #dde4ec;
-  --acento: #2447d6;
-  --sobre-acento: #ffffff;
+  color-scheme: dark;
+  --fundo: #060a14;
+  --texto: #eaf0ff;
+  --suave: #93a3c4;
+  --linha: #1a2640;
+  --acento: #7aa2ff;
+  --brilho: #8fb4ff;
+  --ponto-apagado: #1b2a4a;
+  --sobre-acento: #060a14;
+  --halo: rgba(75, 116, 255, 0.2);
   --sinal: #f2b233;
-  --display: 'Bricolage Grotesque', 'Public Sans', system-ui, sans-serif;
+  --display: 'Sora', 'Public Sans', system-ui, sans-serif;
   --corpo: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  --pagina: 68rem;
-  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --pagina: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --fundo: #0b1322;
-    --texto: #f3f6fa;
-    --suave: #8f9eb2;
-    --linha: #1f2d42;
-    --acento: #6b8cff;
-    --sobre-acento: #0b1322;
+    color-scheme: light;
+    --fundo: #f6f8fd;
+    --texto: #0b1530;
+    --suave: #4a5a7a;
+    --linha: #d9e1f1;
+    --acento: #2447d6;
+    --brilho: #2447d6;
+    --ponto-apagado: #cbd6ee;
+    --sobre-acento: #ffffff;
+    --halo: rgba(36, 71, 214, 0.1);
   }
 }
 
@@ -68,8 +77,7 @@ a {
   text-underline-offset: 0.2em;
 }
 
-a:focus-visible,
-.botao:focus-visible {
+a:focus-visible {
   outline: 3px solid var(--acento);
   outline-offset: 3px;
   border-radius: 4px;
@@ -92,9 +100,11 @@ a:focus-visible,
 
 /* ───── Topo ───── */
 .topo {
-  max-width: var(--pagina);
+  position: relative;
+  z-index: 2;
+  max-width: calc(var(--pagina) + 2 * var(--gutter));
   margin-inline: auto;
-  padding: 1.25rem var(--gutter);
+  padding: 1.4rem var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -103,9 +113,10 @@ a:focus-visible,
 
 .marca {
   font-family: var(--display);
-  font-weight: 700;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1rem;
   letter-spacing: -0.02em;
+  white-space: nowrap;
   color: var(--texto);
   text-decoration: none;
 }
@@ -125,170 +136,302 @@ a:focus-visible,
   color: var(--texto);
 }
 
+@media (max-width: 38rem) {
+  .topo nav a:nth-child(2),
+  .topo nav a:nth-child(3) {
+    display: none;
+  }
+}
+
 /* O ponto âmbar: a assinatura da marca (o mesmo do favicon). */
 .ponto {
   display: inline-block;
-  width: 0.28em;
-  height: 0.28em;
-  margin-left: 0.08em;
+  width: 0.38em;
+  height: 0.38em;
+  margin-left: 0.18em;
   border-radius: 50%;
   background: var(--sinal);
+  box-shadow: 0 0 0.7em var(--sinal);
 }
 
-/* ───── Herói ───── */
-main {
+/* ───── Herói: uma frota de dispositivos sendo varrida por uma onda de luz ───── */
+.heroi {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  margin-top: -4.6rem;
+  padding: calc(4.6rem + clamp(3.5rem, 11vw, 8rem)) var(--gutter) clamp(3.5rem, 9vw, 6.5rem);
+  background: radial-gradient(60rem 32rem at 82% 8%, var(--halo), transparent 70%);
+}
+
+.heroi__texto {
   max-width: var(--pagina);
   margin-inline: auto;
-  padding-inline: var(--gutter);
 }
 
-.heroi {
-  padding-block: clamp(3rem, 10vw, 7rem) clamp(2.5rem, 7vw, 5rem);
+.campo {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(circle, var(--ponto-apagado) 1.3px, transparent 1.8px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 95% at 80% 38%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 75% 95% at 80% 38%, #000 0%, transparent 78%);
+}
+
+.campo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--brilho) 1.6px, transparent 2.2px);
+  background-size: 26px 26px;
+  -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 50%, transparent 100%);
+  mask-image: linear-gradient(100deg, transparent 0%, #000 50%, transparent 100%);
+  -webkit-mask-size: 45% 100%;
+  mask-size: 45% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: 78% 0;
+  mask-position: 78% 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .campo::after {
+    animation: varredura 11s ease-in-out infinite;
+  }
+
+  @keyframes varredura {
+    from {
+      -webkit-mask-position: -100% 0;
+      mask-position: -100% 0;
+    }
+    to {
+      -webkit-mask-position: 200% 0;
+      mask-position: 200% 0;
+    }
+  }
 }
 
 .heroi h1 {
   margin: 0;
+  max-width: 18ch;
   font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(3.1rem, 12.5vw, 8.5rem);
-  line-height: 0.95;
-  letter-spacing: -0.045em;
-}
-
-.heroi .ponto {
-  width: 0.14em;
-  height: 0.14em;
-  margin-left: 0.05em;
+  font-weight: 500;
+  font-size: clamp(2.35rem, 6.4vw, 5.2rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  text-wrap: balance;
 }
 
 .destaque {
-  margin: 2rem 0 0;
-  max-width: 36rem;
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: clamp(1.4rem, 3.4vw, 2rem);
-  line-height: 1.25;
-  letter-spacing: -0.015em;
-}
-
-.apoio {
-  margin: 1.25rem 0 0;
-  max-width: 38rem;
+  margin: 1.75rem 0 0;
+  max-width: 37rem;
   color: var(--suave);
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.6;
 }
 
 .acoes {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin: 2rem 0 0;
+  margin: 2.25rem 0 0;
 }
 
 .botao {
   display: inline-block;
-  padding: 0.75rem 1.4rem;
-  border: 1.5px solid var(--texto);
-  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
   color: var(--texto);
   font-weight: 600;
   text-decoration: none;
+  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
 }
 
 .botao:hover {
-  background: var(--linha);
+  border-color: var(--acento);
 }
 
 .botao--primario {
   background: var(--acento);
   border-color: var(--acento);
   color: var(--sobre-acento);
+  box-shadow: 0 8px 32px -10px var(--acento);
 }
 
 .botao--primario:hover {
-  background: var(--acento);
-  filter: brightness(1.08);
+  box-shadow: 0 10px 40px -8px var(--acento);
+}
+
+.botao:focus-visible {
+  outline: 3px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: 999px;
 }
 
 /* ───── Blocos ───── */
 .bloco {
-  padding-block: clamp(2.5rem, 6vw, 4rem);
+  padding-inline: var(--gutter);
+}
+
+.grade {
+  max-width: var(--pagina);
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
   border-top: 1px solid var(--linha);
-}
-
-.bloco h2 {
-  margin: 0 0 1.5rem;
-  font-family: var(--display);
-  font-weight: 700;
-  font-size: clamp(1.7rem, 4vw, 2.4rem);
-  letter-spacing: -0.025em;
-  line-height: 1.1;
-}
-
-.bloco p {
-  max-width: 40rem;
-}
-
-/* Linhas de definição: o termo à esquerda, a explicação à direita. */
-.linhas {
-  margin: 0;
-}
-
-.linhas > div {
   display: grid;
-  gap: 0.4rem 2.5rem;
-  padding-block: 1.4rem;
-  border-top: 1px solid var(--linha);
+  gap: 1.75rem 3rem;
 }
 
-.linhas > div:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.linhas dt {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.3rem;
-  letter-spacing: -0.015em;
-  line-height: 1.25;
-}
-
-.linhas dd {
-  margin: 0;
-  max-width: 40rem;
-  color: var(--suave);
-}
-
-@media (min-width: 52rem) {
-  .linhas > div {
+@media (min-width: 56rem) {
+  .grade {
     grid-template-columns: 17rem 1fr;
   }
 }
 
-.lista {
-  margin: 0 0 1.25rem;
-  padding-left: 1.2rem;
-  max-width: 40rem;
+.bloco h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.45rem, 2.6vw, 1.85rem);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-wrap: balance;
 }
 
-.lista li {
-  margin-block: 0.5rem;
-  padding-left: 0.25rem;
+/* Trilhas: linhas separadas por filetes; o título inteiro é a área clicável da linha. */
+.trilhas,
+.perguntas {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.lista li::marker {
-  color: var(--sinal);
+.trilhas li {
+  position: relative;
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--linha);
+}
+
+.trilhas li:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.trilhas a {
+  color: var(--texto);
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.3rem, 2.8vw, 1.75rem);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.trilhas a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.trilhas li:first-child a::after {
+  top: 0;
+}
+
+.trilhas li:hover a {
+  color: var(--acento);
+}
+
+.trilhas p {
+  margin: 0.5rem 0 0;
+  max-width: 38rem;
+  color: var(--suave);
+}
+
+.perguntas li {
+  border-top: 1px solid var(--linha);
+}
+
+.perguntas li:first-child {
+  border-top: 0;
+}
+
+.perguntas a {
+  display: block;
+  padding-block: 1.1rem;
+  max-width: 38rem;
+  color: var(--texto);
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.perguntas li:first-child a {
+  padding-top: 0;
+}
+
+.perguntas a:hover {
+  color: var(--acento);
+}
+
+/* ───── Autoria ───── */
+.autoria__texto {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.15rem;
+  line-height: 1.65;
+}
+
+.fatos {
+  margin: 2rem 0 0;
+  max-width: 38rem;
+}
+
+.fatos > div {
+  display: grid;
+  gap: 0.15rem 2rem;
+  padding-block: 0.85rem;
+  border-top: 1px solid var(--linha);
+}
+
+.fatos dt {
+  font-weight: 600;
+}
+
+.fatos dd {
+  margin: 0;
+  color: var(--suave);
+}
+
+@media (min-width: 40rem) {
+  .fatos > div {
+    grid-template-columns: 11rem 1fr;
+  }
 }
 
 .nota {
+  margin: 1.5rem 0 0;
   color: var(--suave);
   font-size: 0.95rem;
 }
 
+.contato__texto {
+  margin: 0;
+  max-width: 34rem;
+  font-size: 1.15rem;
+}
+
 /* ───── Rodapé ───── */
 .rodape {
-  max-width: var(--pagina);
-  margin: 2rem auto 0;
+  max-width: calc(var(--pagina) + 2 * var(--gutter));
+  margin: 1rem auto 0;
   padding: 2rem var(--gutter) 3rem;
   border-top: 1px solid var(--linha);
   color: var(--suave);
