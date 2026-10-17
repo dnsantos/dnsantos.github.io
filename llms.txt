@@ -1,6 +1,6 @@
 # Deivid Santos
 
-> Gestão de dispositivos Apple, em português e na prática. Tutoriais sobre MDM, Jamf Pro, infraestrutura como código e experiência do colaborador (DEX), escritos por Deivid Santos, especialista em Modern Workplace com mais de sete anos de experiência em ambientes corporativos de grande porte, com foco em segurança, automação e conformidade.
+> Gestão de dispositivos Apple, na prática. Tutoriais em português sobre MDM, Jamf Pro, infraestrutura como código e experiência do colaborador (DEX), escritos por Deivid Santos, especialista em Modern Workplace que administra frotas Apple corporativas desde 2019, em ambientes de grande porte, com foco em segurança, automação e conformidade.
 
 ## Conteúdo
 

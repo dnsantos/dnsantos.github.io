@@ -15,15 +15,16 @@
 /* Identidade escura por padrão; variante clara para quem usa o sistema em modo claro. */
 :root {
   color-scheme: dark;
-  --fundo: #060a14;
+  --fundo: #05070f;
+  --painel: #0a1020;
   --texto: #eaf0ff;
   --suave: #93a3c4;
-  --linha: #1a2640;
+  --linha: #16213a;
+  --linha-forte: #26365c;
+  --grade: rgba(122, 162, 255, 0.07);
   --acento: #7aa2ff;
-  --brilho: #8fb4ff;
-  --ponto-apagado: #1b2a4a;
-  --sobre-acento: #060a14;
-  --halo: rgba(75, 116, 255, 0.2);
+  --sobre-acento: #05070f;
+  --halo: rgba(75, 116, 255, 0.22);
   --sinal: #f2b233;
   --display: 'Sora', 'Public Sans', system-ui, sans-serif;
   --corpo: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -35,12 +36,13 @@
   :root {
     color-scheme: light;
     --fundo: #f6f8fd;
+    --painel: #ffffff;
     --texto: #0b1530;
     --suave: #4a5a7a;
-    --linha: #d9e1f1;
+    --linha: #dde5f3;
+    --linha-forte: #c3cfe8;
+    --grade: rgba(36, 71, 214, 0.07);
     --acento: #2447d6;
-    --brilho: #2447d6;
-    --ponto-apagado: #cbd6ee;
     --sobre-acento: #ffffff;
     --halo: rgba(36, 71, 214, 0.1);
   }
@@ -55,6 +57,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -91,20 +94,28 @@ a:focus-visible {
   background: var(--acento);
   color: var(--sobre-acento);
   border-radius: 6px;
-  z-index: 10;
+  z-index: 20;
 }
 
 .pular:focus {
   top: 0.75rem;
 }
 
-/* ───── Topo ───── */
+/* ───── Topo de vidro ───── */
 .topo {
-  position: relative;
-  z-index: 2;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: color-mix(in srgb, var(--fundo) 72%, transparent);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  backdrop-filter: blur(16px) saturate(1.4);
+  border-bottom: 1px solid color-mix(in srgb, var(--linha) 70%, transparent);
+}
+
+.topo__interno {
   max-width: calc(var(--pagina) + 2 * var(--gutter));
   margin-inline: auto;
-  padding: 1.4rem var(--gutter);
+  padding: 1rem var(--gutter);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -154,81 +165,58 @@ a:focus-visible {
   box-shadow: 0 0 0.7em var(--sinal);
 }
 
-/* ───── Herói: uma frota de dispositivos sendo varrida por uma onda de luz ───── */
+/* ───── Herói ───── */
 .heroi {
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  margin-top: -4.6rem;
-  padding: calc(4.6rem + clamp(3.5rem, 11vw, 8rem)) var(--gutter) clamp(3.5rem, 9vw, 6.5rem);
-  background: radial-gradient(60rem 32rem at 82% 8%, var(--halo), transparent 70%);
+  padding: clamp(3rem, 8vw, 6rem) var(--gutter) clamp(3.5rem, 8vw, 6rem);
+  background: radial-gradient(56rem 30rem at 85% 0%, var(--halo), transparent 70%);
 }
 
-.heroi__texto {
-  max-width: var(--pagina);
-  margin-inline: auto;
-}
-
-.campo {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: radial-gradient(circle, var(--ponto-apagado) 1.3px, transparent 1.8px);
-  background-size: 26px 26px;
-  -webkit-mask-image: radial-gradient(ellipse 75% 95% at 80% 38%, #000 0%, transparent 78%);
-  mask-image: radial-gradient(ellipse 75% 95% at 80% 38%, #000 0%, transparent 78%);
-}
-
-.campo::after {
+/* Grade de engenharia ao fundo, esmaecida nas bordas. */
+.heroi::before {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(circle, var(--brilho) 1.6px, transparent 2.2px);
-  background-size: 26px 26px;
-  -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 50%, transparent 100%);
-  mask-image: linear-gradient(100deg, transparent 0%, #000 50%, transparent 100%);
-  -webkit-mask-size: 45% 100%;
-  mask-size: 45% 100%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: 78% 0;
-  mask-position: 78% 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(var(--grade) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grade) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 75% 85% at 68% 30%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(ellipse 75% 85% at 68% 30%, #000 0%, transparent 78%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .campo::after {
-    animation: varredura 11s ease-in-out infinite;
-  }
+.heroi__interno {
+  max-width: var(--pagina);
+  margin-inline: auto;
+  display: grid;
+  gap: 3.25rem 4rem;
+  align-items: center;
+}
 
-  @keyframes varredura {
-    from {
-      -webkit-mask-position: -100% 0;
-      mask-position: -100% 0;
-    }
-    to {
-      -webkit-mask-position: 200% 0;
-      mask-position: 200% 0;
-    }
+@media (min-width: 62rem) {
+  .heroi__interno {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
   }
 }
 
 .heroi h1 {
   margin: 0;
-  max-width: 18ch;
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(2.35rem, 6.4vw, 5.2rem);
-  line-height: 1.04;
+  font-size: clamp(2.3rem, 4.3vw, 3.7rem);
+  line-height: 1.05;
   letter-spacing: -0.04em;
   text-wrap: balance;
 }
 
 .destaque {
   margin: 1.75rem 0 0;
-  max-width: 37rem;
+  max-width: 34rem;
   color: var(--suave);
-  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-size: clamp(1.05rem, 1.8vw, 1.2rem);
   line-height: 1.6;
 }
 
@@ -239,15 +227,22 @@ a:focus-visible {
   margin: 2.25rem 0 0;
 }
 
+.assinatura {
+  margin: 2rem 0 0;
+  max-width: 34rem;
+  color: var(--suave);
+  font-size: 0.95rem;
+}
+
 .botao {
   display: inline-block;
   padding: 0.8rem 1.5rem;
-  border: 1px solid var(--linha);
+  border: 1px solid var(--linha-forte);
   border-radius: 999px;
   color: var(--texto);
   font-weight: 600;
   text-decoration: none;
-  transition: border-color 0.2s, background-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
 .botao:hover {
@@ -262,7 +257,7 @@ a:focus-visible {
 }
 
 .botao--primario:hover {
-  box-shadow: 0 10px 40px -8px var(--acento);
+  box-shadow: 0 10px 44px -8px var(--acento);
 }
 
 .botao:focus-visible {
@@ -271,37 +266,216 @@ a:focus-visible {
   border-radius: 999px;
 }
 
+/* ───── O console da frota: dispositivos lacrados entrando em gestão, em onda ───── */
+.console {
+  position: relative;
+  padding: 1.15rem 1.15rem 1.25rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 20px;
+  background:
+    linear-gradient(180deg, color-mix(in srgb, var(--acento) 9%, var(--painel)), var(--painel) 55%);
+  box-shadow:
+    0 40px 80px -40px color-mix(in srgb, var(--acento) 55%, transparent),
+    inset 0 1px 0 color-mix(in srgb, var(--acento) 30%, transparent);
+}
+
+.console__barra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+
+.console__titulo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--texto);
+  font-family: var(--display);
+  font-weight: 500;
+}
+
+.console__luz {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--sinal);
+  box-shadow: 0 0 10px var(--sinal);
+}
+
+.frota {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(0.75rem, 1.8vw, 1.15rem) clamp(0.6rem, 1.5vw, 1rem);
+  padding: 0.25rem 0.35rem 0.6rem;
+}
+
+.frota i {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--linha-forte);
+  border-radius: 6px;
+  background: var(--painel);
+  animation: enrolar 10s linear infinite;
+  animation-delay: calc(var(--d) * 0.5s);
+}
+
+/* Base do notebook */
+.frota i::after {
+  content: '';
+  position: absolute;
+  left: -9%;
+  right: -9%;
+  bottom: -6px;
+  height: 3px;
+  border-radius: 0 0 4px 4px;
+  background: var(--linha-forte);
+}
+
+/* Luz de status: acende quando o dispositivo entra em gestão */
+.frota i::before {
+  content: '';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--sinal);
+  box-shadow: 0 0 8px var(--sinal);
+  opacity: 0;
+  animation: status 10s linear infinite;
+  animation-delay: calc(var(--d) * 0.5s);
+}
+
+@keyframes enrolar {
+  0%,
+  4% {
+    border-color: var(--linha-forte);
+    background: var(--painel);
+    box-shadow: none;
+  }
+  9% {
+    border-color: var(--acento);
+    background: color-mix(in srgb, var(--acento) 10%, var(--painel));
+    box-shadow: 0 0 26px -3px var(--acento), inset 0 0 16px -8px var(--acento);
+  }
+  17%,
+  62% {
+    border-color: color-mix(in srgb, var(--acento) 60%, var(--linha-forte));
+    background: linear-gradient(160deg, color-mix(in srgb, var(--acento) 26%, var(--painel)), var(--painel));
+    box-shadow: none;
+  }
+  72%,
+  100% {
+    border-color: var(--linha-forte);
+    background: var(--painel);
+    box-shadow: none;
+  }
+}
+
+@keyframes status {
+  0%,
+  12% {
+    opacity: 0;
+  }
+  18%,
+  62% {
+    opacity: 1;
+  }
+  72%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Sem animação: a frota aparece já inteira em gestão. */
+@media (prefers-reduced-motion: reduce) {
+  .frota i,
+  .frota i::before {
+    animation: none;
+  }
+  .frota i {
+    border-color: color-mix(in srgb, var(--acento) 60%, var(--linha-forte));
+    background: linear-gradient(160deg, color-mix(in srgb, var(--acento) 26%, var(--painel)), var(--painel));
+  }
+  .frota i::before {
+    opacity: 1;
+  }
+}
+
+.legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.4rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--suave);
+  font-size: 0.85rem;
+}
+
+.legenda li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.legenda li::before {
+  content: '';
+  width: 0.7rem;
+  height: 0.45rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 2px;
+}
+
+.legenda__inscrevendo::before {
+  border-color: var(--acento);
+  box-shadow: 0 0 8px var(--acento);
+}
+
+.legenda__gerido::before {
+  border-color: color-mix(in srgb, var(--acento) 60%, var(--linha-forte));
+  background: color-mix(in srgb, var(--acento) 35%, var(--painel));
+}
+
 /* ───── Blocos ───── */
 .bloco {
   padding-inline: var(--gutter);
 }
 
-.grade {
+.bloco__interno {
   max-width: var(--pagina);
   margin-inline: auto;
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
-  border-top: 1px solid var(--linha);
-  display: grid;
-  gap: 1.75rem 3rem;
-}
-
-@media (min-width: 56rem) {
-  .grade {
-    grid-template-columns: 17rem 1fr;
-  }
 }
 
 .bloco h2 {
-  margin: 0;
+  margin: 0 0 2rem;
   font-family: var(--display);
   font-weight: 500;
-  font-size: clamp(1.45rem, 2.6vw, 1.85rem);
-  letter-spacing: -0.03em;
-  line-height: 1.2;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: -0.035em;
+  line-height: 1.15;
   text-wrap: balance;
 }
 
-/* Trilhas: linhas separadas por filetes; o título inteiro é a área clicável da linha. */
+@media (min-width: 56rem) {
+  .bloco__interno--lado {
+    display: grid;
+    grid-template-columns: 17rem 1fr;
+    gap: 0 3rem;
+  }
+  .bloco__interno--lado h2 {
+    font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  }
+}
+
+/* ───── Trilhas: blocos de vidro com brilho que segue o mouse ───── */
 .trilhas,
 .perguntas {
   margin: 0;
@@ -309,48 +483,118 @@ a:focus-visible {
   list-style: none;
 }
 
-.trilhas li {
+.trilhas {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 46rem) {
+  .trilhas {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .trilha {
+    grid-column: span 2;
+  }
+  .trilha--destaque {
+    grid-column: span 4;
+  }
+  .trilha:nth-child(2) {
+    grid-column: span 2;
+  }
+}
+
+.trilha {
   position: relative;
-  padding-block: 1.5rem;
-  border-top: 1px solid var(--linha);
+  isolation: isolate;
+  overflow: hidden;
+  padding: 1.6rem 1.6rem 1.7rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 18px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--acento) 6%, var(--painel)), var(--painel));
+  transition: border-color 0.25s;
 }
 
-.trilhas li:first-child {
-  border-top: 0;
-  padding-top: 0;
-}
-
-.trilhas a {
-  color: var(--texto);
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: clamp(1.3rem, 2.8vw, 1.75rem);
-  letter-spacing: -0.03em;
-  line-height: 1.2;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.trilhas a::after {
+.trilha::before {
   content: '';
   position: absolute;
   inset: 0;
+  background: radial-gradient(380px circle at var(--mx, 50%) var(--my, 0%), color-mix(in srgb, var(--acento) 22%, transparent), transparent 62%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: -1;
 }
 
-.trilhas li:first-child a::after {
-  top: 0;
+.trilha:hover {
+  border-color: color-mix(in srgb, var(--acento) 65%, var(--linha-forte));
 }
 
-.trilhas li:hover a {
-  color: var(--acento);
+.trilha:hover::before {
+  opacity: 1;
 }
 
-.trilhas p {
-  margin: 0.5rem 0 0;
-  max-width: 38rem;
+.glifo {
+  display: block;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-bottom: 1.5rem;
+  fill: none;
+  stroke: var(--acento);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.trilha a {
+  color: var(--texto);
+  font-family: var(--display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.trilha--destaque a {
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+/* A área clicável é o bloco inteiro. */
+.trilha a::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.trilha p {
+  margin: 0.7rem 0 0;
+  max-width: 34rem;
   color: var(--suave);
 }
 
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--linha-forte);
+  border-radius: 999px;
+  color: var(--texto);
+  font-size: 0.85rem;
+}
+
+.selo::before {
+  content: '';
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: var(--sinal);
+  box-shadow: 0 0 8px var(--sinal);
+}
+
+/* ───── Perguntas ───── */
 .perguntas li {
   border-top: 1px solid var(--linha);
 }
@@ -361,8 +605,8 @@ a:focus-visible {
 
 .perguntas a {
   display: block;
-  padding-block: 1.1rem;
-  max-width: 38rem;
+  padding-block: 1.15rem;
+  max-width: 40rem;
   color: var(--texto);
   font-family: var(--display);
   font-weight: 400;
@@ -370,7 +614,7 @@ a:focus-visible {
   letter-spacing: -0.02em;
   line-height: 1.35;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.2s, padding-left 0.25s;
 }
 
 .perguntas li:first-child a {
@@ -378,42 +622,56 @@ a:focus-visible {
 }
 
 .perguntas a:hover {
+  padding-left: 0.6rem;
   color: var(--acento);
 }
 
-/* ───── Autoria ───── */
+/* ───── Painéis (autoria e contato) ───── */
+.painel {
+  position: relative;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  border: 1px solid var(--linha-forte);
+  border-radius: 22px;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--acento) 7%, var(--painel)), var(--painel) 60%);
+}
+
 .autoria__texto {
   margin: 0;
-  max-width: 38rem;
-  font-size: 1.15rem;
+  max-width: 44rem;
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
   line-height: 1.65;
 }
 
 .fatos {
+  display: grid;
+  gap: 0.85rem;
   margin: 2rem 0 0;
-  max-width: 38rem;
+}
+
+@media (min-width: 46rem) {
+  .fatos {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .fatos > div {
-  display: grid;
-  gap: 0.15rem 2rem;
-  padding-block: 0.85rem;
-  border-top: 1px solid var(--linha);
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--linha);
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--fundo) 40%, transparent);
 }
 
 .fatos dt {
-  font-weight: 600;
+  font-family: var(--display);
+  font-weight: 500;
+  letter-spacing: -0.02em;
 }
 
 .fatos dd {
-  margin: 0;
+  margin: 0.3rem 0 0;
   color: var(--suave);
-}
-
-@media (min-width: 40rem) {
-  .fatos > div {
-    grid-template-columns: 11rem 1fr;
-  }
+  font-size: 0.95rem;
+  line-height: 1.55;
 }
 
 .nota {
@@ -422,10 +680,23 @@ a:focus-visible {
   font-size: 0.95rem;
 }
 
+.contato {
+  background:
+    radial-gradient(40rem 18rem at 100% 0%, var(--halo), transparent 70%),
+    linear-gradient(180deg, color-mix(in srgb, var(--acento) 7%, var(--painel)), var(--painel) 60%);
+}
+
+.contato h2 {
+  max-width: 28rem;
+  margin-bottom: 1rem;
+  font-size: clamp(1.7rem, 3.6vw, 2.6rem);
+}
+
 .contato__texto {
   margin: 0;
   max-width: 34rem;
-  font-size: 1.15rem;
+  color: var(--suave);
+  font-size: 1.1rem;
 }
 
 /* ───── Rodapé ───── */
