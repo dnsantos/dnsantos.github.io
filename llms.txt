@@ -16,6 +16,7 @@
 - Formação: Tecnólogo em Redes de Computadores, Anhanguera Educacional (2015 a 2017).
 - Plataformas: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator e Apple Business Manager.
 - Identidade e segurança: Platform SSO, Okta, Entra ID, CIS Benchmarks, MITRE ATT&CK e ISO 27002.
+- Infraestrutura como código para MDM: configuração tratada como código, com Git como fonte da verdade, pull requests, validação automática e promoção entre ambientes. Agentes de IA integrados às APIs do Jamf Pro e do Microsoft Graph para inventário, relatórios de conformidade e automação da frota.
 - Automação e IA: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate, Power Apps, n8n, IA generativa, agentes de IA e Claude Code.
 - Certificações Jamf: Management Engineer (ago. 2025), Management Consultant (mar. 2025, expira em mar. 2027), Certified Associate Jamf Protect (jun. 2024) e Certified Associate Jamf Pro (jun. 2021). Certificações Cisco: Ethical Hacker e Introduction to Cybersecurity (out. 2024). Também Scrum Fundamentals, Python Básico, pfSense, ISO 27002 e Computer Forensics Foundation. Credenciais conferíveis no LinkedIn: https://www.linkedin.com/in/santosdeivid/details/certifications/
 - Administrador da comunidade Brazil Apple Admins, no Jamf Community. Palestrante no 1º Sejunta Summit Corporativo e no encontro virtual da Brazil Apple Admins.
