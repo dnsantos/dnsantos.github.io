@@ -4,7 +4,7 @@
 
 ## Cases
 
-- Migração de mais de 1.800 Macs do Intune para o Jamf Pro, em cinco ondas (outubro e novembro de 2025), com mecanismo autoacionado via LaunchDaemon e janelas de adiamento.
+- Migração de toda a frota Mac, cerca de 2.000 equipamentos, do Intune para o Jamf Pro, em cinco ondas (outubro e novembro de 2025), com mecanismo autoacionado via LaunchDaemon e janelas de adiamento.
 - Portal interno único para o time de campo, integrando Jamf, Intune, Apple Business Manager, Entra ID e segurança de endpoint (FastAPI, React e TypeScript).
 - Identidade do Apple Business Manager ao Jamf: federação SCIM com Entra ID e Jamf Connect com OIDC.
 - Troca do agente de segurança de endpoint nos Macs, com pacotes separados, validação prévia e scripts de remoção.
