@@ -252,11 +252,19 @@ button:focus-visible {
   }
 }
 
+.papeis-meus {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.6rem;
+  padding: 0;
+  list-style: none;
+}
+
 .estado {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 1.6rem;
   padding: 0.38rem 0.9rem 0.38rem 0.7rem;
   border: 1px solid var(--borda);
   border-radius: 999px;
@@ -274,6 +282,14 @@ button:focus-visible {
   border-radius: 50%;
   background: var(--verde);
   box-shadow: 0 0 8px var(--verde);
+}
+
+.estado--simples {
+  padding-left: 0.9rem;
+}
+
+.estado--simples::before {
+  display: none;
 }
 
 .abertura h1 {
