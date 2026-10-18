@@ -37,8 +37,8 @@
     color-scheme: light;
     --base: #e9edf5;
     --tinta: #11131a;
-    --tinta-2: rgba(28, 30, 38, 0.66);
-    --tinta-3: rgba(28, 30, 38, 0.42);
+    --tinta-2: rgba(28, 30, 38, 0.78);
+    --tinta-3: rgba(28, 30, 38, 0.64);
     --vidro: rgba(255, 255, 255, 0.58);
     --vidro-forte: rgba(255, 255, 255, 0.78);
     --borda: rgba(16, 20, 30, 0.1);
@@ -188,7 +188,6 @@ button:focus-visible {
   height: 0.45rem;
   border-radius: 50%;
   background: var(--ambar);
-  box-shadow: 0 0 10px var(--ambar);
 }
 
 .barra nav {
@@ -216,7 +215,7 @@ button:focus-visible {
 }
 
 .barra nav .destaque:hover {
-  background: color-mix(in srgb, var(--azul) 85%, #fff);
+  background: color-mix(in srgb, var(--azul) 88%, #000);
   color: #fff;
 }
 
@@ -281,7 +280,6 @@ button:focus-visible {
   height: 0.45rem;
   border-radius: 50%;
   background: var(--verde);
-  box-shadow: 0 0 8px var(--verde);
 }
 
 .estado--simples {
@@ -349,7 +347,7 @@ button:focus-visible {
 }
 
 .botao--azul:hover {
-  background: color-mix(in srgb, var(--azul) 85%, #fff);
+  background: color-mix(in srgb, var(--azul) 88%, #000);
   border-color: transparent;
 }
 
