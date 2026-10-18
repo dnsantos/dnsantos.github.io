@@ -1,8 +1,13 @@
 # Deivid Santos
 
-> Engenharia e automação para frotas Apple corporativas. Deivid Santos trabalha desde 2019 desenhando e administrando ambientes Apple em grande escala, do deploy zero-touch ao compliance, e hoje é especialista em Modern Workplace, em empresas de grande porte dos segmentos financeiro, mídia e tecnologia, com foco em segurança, automação e conformidade.
+> O que eu aprendo operando frotas Apple, eu escrevo. Deivid Santos administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante.
 
-## Cases
+## Material publicado
+
+- 12 lições em cinco trilhas, em learn.deividsantos.com.br: Fundamentos de MDM e ABM, Jamf Pro na prática, infraestrutura como código, DEX e Modern Workplace.
+- Caminhos de leitura por situação: montar uma frota do zero, herdar um Jamf Pro, tirar a configuração do console e mostrar que a frota funciona.
+
+## Da prática
 
 - Migração de toda a frota Mac, cerca de 2.000 equipamentos, do Intune para o Jamf Pro, em cinco ondas (outubro e novembro de 2025), com mecanismo autoacionado via LaunchDaemon e janelas de adiamento.
 - Portal interno único para o time de campo, integrando Jamf, Intune, Apple Business Manager, Entra ID e segurança de endpoint (FastAPI, React e TypeScript).
