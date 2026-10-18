@@ -827,17 +827,19 @@ main,
 /* ───── Retrato (boneco) ───── */
 .retrato {
   margin: 0;
-  justify-self: center;
   width: 100%;
-  max-width: 34rem;
-  aspect-ratio: 1;
   overflow: hidden;
   border-radius: 14px;
-  background: #c7cad3;
+  background: var(--term);
   box-shadow: 0.9rem 0.9rem 0 var(--sinal);
 }
 
-.retrato img,
+.retrato img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .sobre__img img {
   display: block;
   width: 100%;
@@ -845,16 +847,10 @@ main,
   object-fit: cover;
 }
 
-@media (prefers-color-scheme: dark) {
-  .retrato {
-    background: #1c1d21;
-  }
-}
-
 @media (max-width: 40rem) {
   .retrato {
     box-shadow: 0.55rem 0.55rem 0 var(--sinal);
-    max-width: calc(100% - 0.55rem);
+    width: calc(100% - 0.55rem);
   }
 }
 
