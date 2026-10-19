@@ -1,6 +1,6 @@
 # Deivid Santos
 
-> Engenheiro de Modern Workplace em São Paulo. Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante.
+> Engenheiro de Modern Workplace em São Paulo. Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante. O que ele descobre operando, ele escreve e publica de graça.
 
 ## Quem é
 
@@ -12,7 +12,7 @@
 
 ## Lições publicadas
 
-Onze lições gratuitas, sem cadastro, em https://learn.deividsantos.com.br/ , divididas em cinco trilhas:
+Onze lições gratuitas, sem cadastro, em https://learn.deividsantos.com.br/ , divididas em cinco trilhas. Cada uma parte de um problema real de frota e termina com o que testar antes de ir para produção. Nenhum exemplo usa dado real de empresa.
 
 - Fundamentos: o que é MDM e como o macOS e o iOS conversam com ele; Apple Business Manager e Automated Device Enrollment; supervisão e tipos de enrollment.
 - Jamf Pro: Smart Groups e Extension Attributes; scripts que rodam em produção sem surpresas.
@@ -20,26 +20,28 @@ Onze lições gratuitas, sem cadastro, em https://learn.deividsantos.com.br/ , d
 - Experiência do colaborador (DEX): o que é DEX e como medir em frotas Apple; sinais de DEX no Mac com Extension Attributes.
 - Modern Workplace: mapa do Modern Workplace Apple; Platform SSO no macOS, requisitos e piloto.
 
-Caminhos de leitura por situação: montar uma frota do zero; herdar um Jamf Pro; tirar a configuração do console; mostrar que a frota funciona.
+## Caminhos de leitura
 
-## A pilha de trabalho
+Quatro situações, cada uma com três lições na ordem que faz sentido: vai montar uma frota do zero; herdou um Jamf Pro de alguém; quer tirar a configuração do console; precisa mostrar que a frota funciona.
+
+## Ferramentas de trabalho
 
 - Dispositivos: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator, Apple Business Manager, zero-touch deployment, migração de macOS sem downtime.
 - Identidade: Platform SSO, Entra ID, Okta, SCIM, Jamf Connect, OIDC.
 - Segurança: Jamf Protect, CIS Benchmarks, MITRE ATT&CK, ISO 27002, segurança de endpoint, resposta a incidentes.
 - Automação e IA: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate, Power Apps, n8n, Git e GitHub, Jamf Pro API, Microsoft Graph, FastAPI, React, IA generativa, agentes de IA.
 
-## O que fez
+## O que já teve que resolver
 
-- Migrou cerca de 2.000 Macs do Intune para o Jamf Pro, em cinco ondas, entre outubro e novembro de 2025, com mecanismo autoacionado no próprio Mac e janelas de adiamento. Nenhum equipamento ficou para trás.
-- Federou o Apple Business Manager com o Entra ID por SCIM e implantou o Jamf Connect com OIDC. Aprendizado: as funções Administrator e People Manager do ABM não podem ser federadas.
-- Trocou o agente de segurança de endpoint da frota, com pacotes separados, validação antes de instalar e scripts de remoção. Aprendizado: o certificado da inspeção SSL do antivírus provocava falhas silenciosas de HTTPS em outros agentes.
-- Está construindo um portal interno que reúne Jamf, Intune, Apple Business Manager, Entra ID e antivírus numa só tela, com FastAPI e React.
+- Migrou cerca de 2.000 Macs do Intune para o Jamf Pro, em cinco ondas, entre outubro e novembro de 2025. O Mac se migrava sozinho, com janela de adiamento para a pessoa escolher a hora, e um script em Python cruzava o andamento das equipes com o inventário. Nenhum equipamento ficou para trás.
+- Federou o Apple Business Manager com o Entra ID por SCIM e implantou o Jamf Connect com OIDC. Aprendizado: as funções Administrator e People Manager do ABM não podem ser federadas, e isso muda todo o desenho do acesso administrativo.
+- Trocou o agente de segurança de endpoint da frota inteira, com pacote separado do antivírus, validação antes de instalar e script de remoção. Aprendizado: o certificado da inspeção SSL do antivírus derrubava o HTTPS de outros agentes, em silêncio.
+- Está construindo um portal interno que reúne Jamf, Intune, Apple Business Manager, Entra ID e antivírus numa tela só, com relatórios como código. FastAPI atrás, React na frente.
 - Como consultor, fez duas implantações do Jamf Pro do zero, do Apple Business Manager às políticas em produção.
 
 ## Trajetória
 
-Globo (2025 até hoje), Localiza&Co (2024 a 2025), Banco PAN (2021 a 2024), BTG Pactual (2019 a 2021), consultoria MACBR (2018 a 2026, em paralelo) e suporte, redes e infraestrutura de 2011 a 2019. Tecnólogo em Redes de Computadores pela Anhanguera Educacional (2015 a 2017).
+Globo (2025 até hoje), Localiza&Co (2024 a 2025), Banco PAN (2021 a 2024), BTG Pactual (2019 a 2021), consultoria MACBR (2018 a 2026, em paralelo) e suporte, redes e infraestrutura de 2011 a 2019, começando em suporte mobile na TIM. Tecnólogo em Redes de Computadores pela Anhanguera Educacional (2015 a 2017).
 
 ## Certificações
 
