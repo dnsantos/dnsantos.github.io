@@ -1,36 +1,53 @@
 # Deivid Santos
 
-> O que eu aprendo operando frotas Apple, eu escrevo. Deivid Santos é Engenheiro de Modern Workplace, Apple Platform Engineer e AI-Native Infrastructure Engineer. Ele administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante.
+> Engenheiro de Modern Workplace em São Paulo. Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante.
 
-## Material publicado
+## Quem é
 
-- 11 lições em cinco trilhas, em learn.deividsantos.com.br: Fundamentos de MDM e ABM, Jamf Pro na prática, infraestrutura como código, DEX e Modern Workplace.
-- Caminhos de leitura por situação: montar uma frota do zero, herdar um Jamf Pro, tirar a configuração do console e mostrar que a frota funciona.
+- Nome: Deivid Santos. Títulos: Engenheiro de Modern Workplace, Apple Platform Engineer, AI-Native Infrastructure Engineer.
+- Em TI desde 2011, com dispositivos Apple corporativos desde 2019. Mais de 3.200 dispositivos gerenciados ao longo da carreira.
+- Hoje na Globo, com cerca de 2.000 Macs em Jamf Pro, Intune, Apple Business Manager e Entra ID.
+- Administrador da comunidade Brazil Apple Admins, no Jamf Community.
+- Contato: dnsto@icloud.com · https://www.linkedin.com/in/santosdeivid · https://github.com/dnsantos
 
-## Da prática
+## Lições publicadas
 
-- Migração de toda a frota Mac, cerca de 2.000 equipamentos, do Intune para o Jamf Pro, em cinco ondas (outubro e novembro de 2025), com mecanismo autoacionado via LaunchDaemon e janelas de adiamento.
-- Portal interno único para o time de campo, integrando Jamf, Intune, Apple Business Manager, Entra ID e segurança de endpoint (FastAPI, React e TypeScript).
-- Identidade do Apple Business Manager ao Jamf: federação SCIM com Entra ID e Jamf Connect com OIDC.
-- Troca do agente de segurança de endpoint nos Macs, com pacotes separados, validação prévia e scripts de remoção.
+Onze lições gratuitas, sem cadastro, em https://learn.deividsantos.com.br/ , divididas em cinco trilhas:
 
-## Experiência e credenciais
+- Fundamentos: o que é MDM e como o macOS e o iOS conversam com ele; Apple Business Manager e Automated Device Enrollment; supervisão e tipos de enrollment.
+- Jamf Pro: Smart Groups e Extension Attributes; scripts que rodam em produção sem surpresas.
+- Infraestrutura como código: por que e por onde começar; pipeline de validação com GitHub Actions.
+- Experiência do colaborador (DEX): o que é DEX e como medir em frotas Apple; sinais de DEX no Mac com Extension Attributes.
+- Modern Workplace: mapa do Modern Workplace Apple; Platform SSO no macOS, requisitos e piloto.
 
-- Na área de TI desde 2011 (suporte, redes e infraestrutura) e com dispositivos Apple corporativos desde 2019: zero-touch deployment, migrações de macOS sem downtime, onboarding automatizado, resposta a incidentes e conformidade.
-- Mais de 3.200 dispositivos gerenciados ao longo da carreira (cerca de 2.000 na Globo, 500 na Localiza&Co, 400 no Banco PAN e 300 no BTG Pactual) e duas implantações do Jamf Pro do zero, do Apple Business Manager às políticas em produção, como consultor.
-- Trajetória: Globo (2025 até hoje, Especialista em Modern Workplace), Localiza&Co (2024 a 2025), Banco PAN (2021 a 2024), BTG Pactual (2019 a 2021), consultoria MACBR (2018 a 2026).
-- Formação: Tecnólogo em Redes de Computadores, Anhanguera Educacional (2015 a 2017).
-- Plataformas: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator e Apple Business Manager.
-- Identidade e segurança: Platform SSO, Okta, Entra ID, CIS Benchmarks, MITRE ATT&CK e ISO 27002.
-- Infraestrutura como código para MDM: configuração tratada como código, com Git como fonte da verdade, pull requests, validação automática e promoção entre ambientes. Agentes de IA integrados às APIs do Jamf Pro e do Microsoft Graph para inventário, relatórios de conformidade e automação da frota.
-- Automação e IA: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate, Power Apps, n8n, IA generativa, agentes de IA e Claude Code.
-- Certificações Jamf: Management Engineer (ago. 2025), Management Consultant (mar. 2025, expira em mar. 2027), Certified Associate Jamf Protect (jun. 2024) e Certified Associate Jamf Pro (jun. 2021). Certificações Cisco: Ethical Hacker e Introduction to Cybersecurity (out. 2024). Também Scrum Fundamentals, Python Básico, pfSense, ISO 27002 e Computer Forensics Foundation. Credenciais conferíveis no LinkedIn: https://www.linkedin.com/in/santosdeivid/details/certifications/
-- Administrador da comunidade Brazil Apple Admins, no Jamf Community. Palestrante no 1º Sejunta Summit Corporativo e no encontro virtual da Brazil Apple Admins.
+Caminhos de leitura por situação: montar uma frota do zero; herdar um Jamf Pro; tirar a configuração do console; mostrar que a frota funciona.
+
+## A pilha de trabalho
+
+- Dispositivos: Jamf Pro, Jamf School, Microsoft Intune, Mosyle, Hexnode, Apple Configurator, Apple Business Manager, zero-touch deployment, migração de macOS sem downtime.
+- Identidade: Platform SSO, Entra ID, Okta, SCIM, Jamf Connect, OIDC.
+- Segurança: Jamf Protect, CIS Benchmarks, MITRE ATT&CK, ISO 27002, segurança de endpoint, resposta a incidentes.
+- Automação e IA: Swift Dialog, Bash, Python, PowerShell, AppleScript, Power Automate, Power Apps, n8n, Git e GitHub, Jamf Pro API, Microsoft Graph, FastAPI, React, IA generativa, agentes de IA.
+
+## O que fez
+
+- Migrou cerca de 2.000 Macs do Intune para o Jamf Pro, em cinco ondas, entre outubro e novembro de 2025, com mecanismo autoacionado no próprio Mac e janelas de adiamento. Nenhum equipamento ficou para trás.
+- Federou o Apple Business Manager com o Entra ID por SCIM e implantou o Jamf Connect com OIDC. Aprendizado: as funções Administrator e People Manager do ABM não podem ser federadas.
+- Trocou o agente de segurança de endpoint da frota, com pacotes separados, validação antes de instalar e scripts de remoção. Aprendizado: o certificado da inspeção SSL do antivírus provocava falhas silenciosas de HTTPS em outros agentes.
+- Está construindo um portal interno que reúne Jamf, Intune, Apple Business Manager, Entra ID e antivírus numa só tela, com FastAPI e React.
+- Como consultor, fez duas implantações do Jamf Pro do zero, do Apple Business Manager às políticas em produção.
+
+## Trajetória
+
+Globo (2025 até hoje), Localiza&Co (2024 a 2025), Banco PAN (2021 a 2024), BTG Pactual (2019 a 2021), consultoria MACBR (2018 a 2026, em paralelo) e suporte, redes e infraestrutura de 2011 a 2019. Tecnólogo em Redes de Computadores pela Anhanguera Educacional (2015 a 2017).
+
+## Certificações
+
+Jamf Management Engineer (ago. 2025), Jamf Management Consultant (mar. 2025, expira em mar. 2027), Jamf Certified Associate Jamf Protect (jun. 2024), Jamf Certified Associate Jamf Pro (jun. 2021), Ethical Hacker e Introduction to Cybersecurity pela Cisco (out. 2024), além de seis certificados em segurança, redes e Python. Credenciais conferíveis em https://www.linkedin.com/in/santosdeivid/details/certifications/
 
 ## Links
 
-- [Modern Workplace na prática](https://learn.deividsantos.com.br/): tutoriais em português sobre gestão de dispositivos Apple.
-- [Índice dos tutoriais para LLMs](https://learn.deividsantos.com.br/llms.txt): lista de todas as lições com descrições.
+- [Modern Workplace na prática](https://learn.deividsantos.com.br/): as onze lições, em português.
+- [Índice para LLMs](https://learn.deividsantos.com.br/llms.txt): todas as lições com descrições.
 - [LinkedIn](https://www.linkedin.com/in/santosdeivid)
 - [GitHub](https://github.com/dnsantos)
-- [Contato](mailto:dnsto@icloud.com): conversas técnicas, convites para eventos e projetos.

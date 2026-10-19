@@ -2,12 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Deivid Santos | Modern Workplace para Apple, em português</title>
-  <meta name="description" content="Engenheiro de Modern Workplace, Apple Platform Engineer e AI-Native Infrastructure Engineer. Deivid Santos escreve sobre gestão de dispositivos Apple em empresas: MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e DEX. Material gratuito em português, escrito por quem opera frotas desde 2019.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Deivid Santos | Modern Workplace para Apple</title>
+  <meta name="description" content="Deivid Santos, Engenheiro de Modern Workplace. Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO e automação.">
   <meta name="author" content="Deivid Santos">
-  <meta name="theme-color" content="#070910" media="(prefers-color-scheme: dark)">
-  <meta name="theme-color" content="#e9edf5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#10203f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#b9cdf2" media="(prefers-color-scheme: light)">
   <link rel="canonical" href="https://deividsantos.com.br/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt">
@@ -15,8 +15,8 @@
   <meta property="og:type" content="profile">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Deivid Santos">
-  <meta property="og:title" content="Deivid Santos | Modern Workplace para Apple, em português">
-  <meta property="og:description" content="O que aprendo operando frotas Apple, eu escrevo. Material gratuito sobre MDM, Jamf Pro, identidade, segurança e automação.">
+  <meta property="og:title" content="Deivid Santos | Modern Workplace para Apple">
+  <meta property="og:description" content="Engenheiro de Modern Workplace. Frotas Apple corporativas desde 2019 e lições gratuitas em português.">
   <meta property="og:url" content="https://deividsantos.com.br/">
   <meta property="og:image" content="https://deividsantos.com.br/og.png">
   <meta property="og:image:width" content="1200">
@@ -24,7 +24,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://deividsantos.com.br/og.png">
 
-  <link rel="preload" href="/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://learn.deividsantos.com.br">
   <link rel="stylesheet" href="/style.css">
 
@@ -35,34 +35,20 @@
     "@id": "https://deividsantos.com.br/#pagina",
     "url": "https://deividsantos.com.br/",
     "inLanguage": "pt-BR",
-    "name": "Deivid Santos | Modern Workplace para Apple, em português",
+    "name": "Deivid Santos | Modern Workplace para Apple",
     "mainEntity": {
       "@type": "Person",
       "@id": "https://deividsantos.com.br/#deivid",
       "name": "Deivid Santos",
       "url": "https://deividsantos.com.br/",
-      "image": "https://deividsantos.com.br/img/deivid.webp",
+      "image": "https://deividsantos.com.br/img/deivid-sobre.webp",
       "jobTitle": ["Engenheiro de Modern Workplace", "Apple Platform Engineer", "AI-Native Infrastructure Engineer"],
       "worksFor": { "@type": "Organization", "name": "Globo" },
       "alumniOf": { "@type": "CollegeOrUniversity", "name": "Anhanguera Educacional" },
-      "description": "Escreve sobre gestão de dispositivos Apple em empresas e opera frotas corporativas desde 2019: MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Autor do Modern Workplace na prática.",
-      "sameAs": [
-        "https://www.linkedin.com/in/santosdeivid",
-        "https://github.com/dnsantos"
-      ],
-      "knowsAbout": [
-        "Gerenciamento de dispositivos Apple",
-        "MDM",
-        "Jamf Pro",
-        "Apple Business Manager",
-        "Microsoft Intune",
-        "Platform SSO",
-        "CIS Benchmarks",
-        "Infraestrutura como código",
-        "Agentes de IA integrados a APIs de MDM",
-        "Digital Employee Experience",
-        "macOS"
-      ],
+      "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressCountry": "BR" },
+      "description": "Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador.",
+      "sameAs": ["https://www.linkedin.com/in/santosdeivid", "https://github.com/dnsantos"],
+      "knowsAbout": ["Gerenciamento de dispositivos Apple","MDM","Jamf Pro","Apple Business Manager","Microsoft Intune","Platform SSO","CIS Benchmarks","Infraestrutura como código","Agentes de IA integrados a APIs de MDM","Digital Employee Experience","macOS"],
       "hasCredential": [
         { "@type": "EducationalOccupationalCredential", "name": "Jamf Management Engineer", "recognizedBy": { "@type": "Organization", "name": "Jamf" }, "dateCreated": "2025-08" },
         { "@type": "EducationalOccupationalCredential", "name": "Jamf Management Consultant", "recognizedBy": { "@type": "Organization", "name": "Jamf" }, "dateCreated": "2025-03", "expires": "2027-03" },
@@ -77,460 +63,374 @@
   </script>
 </head>
 <body>
-  <div class="aurora" aria-hidden="true"></div>
-  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+  <div class="mesa" aria-hidden="true"></div>
+  <a class="pular" href="#sobre">Pular para o conteúdo</a>
 
   <header class="barra">
-    <a class="marca" href="/" aria-label="Deivid Santos, página inicial">Deivid Santos</a>
-    <nav aria-label="Principal">
-      <a href="#materiais">Materiais</a>
-      <a href="#comecar">Por onde começar</a>
-      <a href="#pilha">A pilha</a>
-      <a href="#pratica">Da prática</a>
-      <a class="destaque" href="https://learn.deividsantos.com.br/">Ler as lições</a>
+    <a class="barra__marca" href="/">Deivid Santos</a>
+    <nav class="barra__menus" aria-label="Janelas">
+      <button type="button" data-abrir="sobre">Sobre</button>
+      <button type="button" data-abrir="licoes">Lições</button>
+      <button type="button" data-abrir="comecar">Por onde começar</button>
+      <button type="button" data-abrir="pilha">A pilha</button>
+      <button type="button" data-abrir="trajetoria">Trajetória</button>
+      <button type="button" data-abrir="contato">Contato</button>
     </nav>
+    <div class="barra__dir">
+      <a class="so-largo" href="https://learn.deividsantos.com.br/">learn.deividsantos.com.br</a>
+      <span>São Paulo</span>
+    </div>
   </header>
 
-  <main id="conteudo" class="envelope">
-    <section class="abertura" aria-labelledby="titulo">
-      <div class="entra">
-        <ul class="papeis-meus">
-          <li class="estado">Engenheiro de Modern Workplace</li>
-          <li class="estado estado--simples">Apple Platform Engineer</li>
-          <li class="estado estado--simples">AI-Native Infrastructure Engineer</li>
-        </ul>
-        <h1 id="titulo">O que eu aprendo operando frotas Apple, eu escrevo.</h1>
-        <p class="abertura__texto">Tudo aqui sai de ambiente em produção: as lições, os scripts e os checklists que eu publico são os mesmos que uso para manter frotas Apple de milhares de equipamentos de pé.</p>
-        <p class="abertura__ancora">Quatro empresas, duas implantações do zero, uma frota inteira migrada, e cada afirmação apoiada na documentação oficial.</p>
-        <p class="acoes">
-          <a class="botao botao--azul" href="https://learn.deividsantos.com.br/">Ler as lições</a>
-          <a class="botao" href="#comecar">Por onde começar</a>
-        </p>
-      </div>
+  <main class="area" id="area">
 
-      <figure class="retrato entra entra--2">
-        <img src="/img/deivid-sobre.webp" width="1000" height="1000" alt="Ilustração em estilo de boneco colecionável de Deivid Santos, de cabelo cacheado escuro, barba e óculos, acenando e levando um MacBook sob o braço." fetchpriority="high">
-      </figure>
+    <!-- Sobre -->
+    <section class="janela" id="sobre" style="--x:6%; --y:5%; --w:400px" aria-labelledby="t-sobre">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar Sobre"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo">Sobre este especialista</span>
+      </div>
+      <div class="janela__corpo">
+        <div class="sobre">
+          <img src="/img/deivid-sobre.webp" width="256" height="256" alt="Ilustração de Deivid Santos em estilo de boneco colecionável, acenando e com um MacBook sob o braço." fetchpriority="high">
+          <div>
+            <h1 id="t-sobre">Deivid Santos</h1>
+            <p class="sobre__cargo">Engenheiro de Modern Workplace</p>
+          </div>
+          <dl class="ficha">
+            <dt>Função</dt><dd>Apple Platform Engineer</dd>
+            <dt>Também</dt><dd>AI-Native Infrastructure Engineer</dd>
+            <dt>Onde</dt><dd>Globo, São Paulo</dd>
+            <dt>Com Apple</dt><dd>desde 2019</dd>
+            <dt>Em TI</dt><dd>desde 2011</dd>
+            <dt>Frota</dt><dd>3.200+ dispositivos ao longo da carreira</dd>
+            <dt>Certificações</dt><dd>4 Jamf, 2 Cisco</dd>
+            <dt>Comunidade</dt><dd>Brazil Apple Admins</dd>
+          </dl>
+          <p class="acoes">
+            <a class="bt bt--azul" href="https://learn.deividsantos.com.br/">Ler as lições</a>
+            <button class="bt" type="button" data-abrir="licoes">Ver o índice</button>
+          </p>
+        </div>
+      </div>
     </section>
 
-    <dl class="numeros entra entra--3" aria-label="Números">
-      <div><dt>11</dt><dd>lições publicadas</dd></div>
-      <div><dt>5</dt><dd>trilhas</dd></div>
-      <div><dt>3.200+</dt><dd>dispositivos gerenciados</dd></div>
-      <div><dt>15 anos</dt><dd>de prática em TI</dd></div>
-    </dl>
-
-    <section id="comecar" class="secao" aria-labelledby="t-comecar">
-      <div class="cabeca">
-        <h2 class="titulo" id="t-comecar">Quatro situações, quatro caminhos</h2>
-        <p class="apoio">Se você não sabe por onde entrar, comece por aqui. Cada caminho é uma sequência de três lições, na ordem em que fazem sentido.</p>
+    <!-- Lições -->
+    <section class="janela" id="licoes" style="--x:38%; --y:22%; --w:620px" aria-labelledby="t-licoes">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar Lições"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo" id="t-licoes">Lições</span>
       </div>
+      <div class="janela__corpo janela__corpo--liso">
+        <div class="lista__cab" aria-hidden="true">
+          <span>Nome</span><span>Trilha</span><span>Revisão</span>
+        </div>
+        <ul class="lista">
+          <li><a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">
+            <span class="lista__nome"><span>O que é MDM e como o macOS e o iOS conversam com ele</span></span>
+            <span class="lista__meta lista__meta--trilha">Fundamentos</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/fundamentos/apple-business-manager-e-ade/">
+            <span class="lista__nome"><span>Apple Business Manager e Automated Device Enrollment</span></span>
+            <span class="lista__meta lista__meta--trilha">Fundamentos</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/fundamentos/supervisao-e-tipos-de-enrollment/">
+            <span class="lista__nome"><span>Supervisão e tipos de enrollment: qual escolher</span></span>
+            <span class="lista__meta lista__meta--trilha">Fundamentos</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/jamf-pro/smart-groups-e-extension-attributes/">
+            <span class="lista__nome"><span>Smart Groups e Extension Attributes</span></span>
+            <span class="lista__meta lista__meta--trilha">Jamf Pro</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/jamf-pro/scripts-para-producao/">
+            <span class="lista__nome"><span>Scripts que rodam em produção sem surpresas</span></span>
+            <span class="lista__meta lista__meta--trilha">Jamf Pro</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/iac/iac-para-mdm-por-que-e-por-onde-comecar/">
+            <span class="lista__nome"><span>Infraestrutura como código para MDM</span></span>
+            <span class="lista__meta lista__meta--trilha">Infra como código</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/iac/pipeline-de-validacao-com-github-actions/">
+            <span class="lista__nome"><span>Pipeline de validação com GitHub Actions</span></span>
+            <span class="lista__meta lista__meta--trilha">Infra como código</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/dex/o-que-e-dex-e-como-medir/">
+            <span class="lista__nome"><span>O que é DEX e como medir em frotas Apple</span></span>
+            <span class="lista__meta lista__meta--trilha">Experiência</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/dex/sinais-de-dex-com-extension-attributes/">
+            <span class="lista__nome"><span>Sinais de DEX no Mac: disco, reinício e bateria</span></span>
+            <span class="lista__meta lista__meta--trilha">Experiência</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/modern-workplace/mapa-do-modern-workplace-apple/">
+            <span class="lista__nome"><span>Mapa do Modern Workplace Apple</span></span>
+            <span class="lista__meta lista__meta--trilha">Modern Workplace</span><span class="lista__meta">out. 2026</span></a></li>
+          <li><a href="https://learn.deividsantos.com.br/modern-workplace/platform-sso-visao-geral/">
+            <span class="lista__nome"><span>Platform SSO no macOS: requisitos e piloto</span></span>
+            <span class="lista__meta lista__meta--trilha">Modern Workplace</span><span class="lista__meta">out. 2026</span></a></li>
+        </ul>
+        <p class="lista__rodape">11 lições, 5 trilhas. Gratuitas, sem cadastro. <a href="https://learn.deividsantos.com.br/roadmap/">Ver o que vem a seguir</a>.</p>
+      </div>
+    </section>
 
-      <ul class="papeis">
-        <li class="papel">
-          <h3>Você vai montar uma frota do zero</h3>
+    <!-- Por onde começar -->
+    <section class="janela" id="comecar" hidden style="--x:16%; --y:30%; --w:430px" aria-labelledby="t-comecar">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar Por onde começar"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo" id="t-comecar">Por onde começar</span>
+      </div>
+      <div class="janela__corpo">
+        <div class="caminho">
+          <h2>Você vai montar uma frota do zero</h2>
           <ol>
             <li><a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">Entender o que o MDM faz</a></li>
             <li><a href="https://learn.deividsantos.com.br/fundamentos/apple-business-manager-e-ade/">Ligar o Apple Business Manager ao MDM</a></li>
             <li><a href="https://learn.deividsantos.com.br/fundamentos/supervisao-e-tipos-de-enrollment/">Escolher o tipo de enrollment</a></li>
           </ol>
-        </li>
-        <li class="papel">
-          <h3>Você herdou um Jamf Pro de alguém</h3>
+        </div>
+        <div class="caminho">
+          <h2>Você herdou um Jamf Pro de alguém</h2>
           <ol>
-            <li><a href="https://learn.deividsantos.com.br/modern-workplace/mapa-do-modern-workplace-apple/">Ver o mapa inteiro antes de mexer</a></li>
+            <li><a href="https://learn.deividsantos.com.br/modern-workplace/mapa-do-modern-workplace-apple/">Ver o mapa antes de mexer</a></li>
             <li><a href="https://learn.deividsantos.com.br/jamf-pro/smart-groups-e-extension-attributes/">Organizar a frota em Smart Groups</a></li>
             <li><a href="https://learn.deividsantos.com.br/jamf-pro/scripts-para-producao/">Escrever scripts que não quebram</a></li>
           </ol>
-        </li>
-        <li class="papel">
-          <h3>Você quer tirar a configuração do console</h3>
+        </div>
+        <div class="caminho">
+          <h2>Você quer tirar a configuração do console</h2>
           <ol>
             <li><a href="https://learn.deividsantos.com.br/iac/iac-para-mdm-por-que-e-por-onde-comecar/">Começar pelo Git como fonte da verdade</a></li>
-            <li><a href="https://learn.deividsantos.com.br/iac/pipeline-de-validacao-com-github-actions/">Validar perfis e scripts a cada mudança</a></li>
+            <li><a href="https://learn.deividsantos.com.br/iac/pipeline-de-validacao-com-github-actions/">Validar a cada mudança</a></li>
             <li><a href="https://learn.deividsantos.com.br/jamf-pro/scripts-para-producao/">Padronizar o que vai para produção</a></li>
           </ol>
-        </li>
-        <li class="papel">
-          <h3>Você precisa mostrar que a frota funciona</h3>
+        </div>
+        <div class="caminho">
+          <h2>Você precisa mostrar que a frota funciona</h2>
           <ol>
-            <li><a href="https://learn.deividsantos.com.br/dex/o-que-e-dex-e-como-medir/">Escolher o que medir, sem invadir</a></li>
+            <li><a href="https://learn.deividsantos.com.br/dex/o-que-e-dex-e-como-medir/">Escolher o que medir</a></li>
             <li><a href="https://learn.deividsantos.com.br/dex/sinais-de-dex-com-extension-attributes/">Coletar os sinais no Mac</a></li>
             <li><a href="https://learn.deividsantos.com.br/modern-workplace/platform-sso-visao-geral/">Tirar o atrito do login</a></li>
           </ol>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
-    <section id="materiais" class="secao" aria-labelledby="t-materiais">
-      <div class="cabeca">
-        <h2 class="titulo" id="t-materiais">O índice completo</h2>
-        <p class="apoio">Onze lições gratuitas, sem cadastro e sem vínculo com fabricante. Cada uma parte de um problema real de frota e termina com o que testar antes de ir para produção.</p>
+    <!-- A pilha -->
+    <section class="janela" id="pilha" hidden style="--x:30%; --y:12%; --w:520px" aria-labelledby="t-pilha">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar A pilha"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo" id="t-pilha">A pilha</span>
       </div>
-
-      <div class="segmentado" id="segmentado" role="toolbar" aria-label="Filtrar por trilha" aria-controls="grade" hidden>
-        <span class="polegar" id="polegar" aria-hidden="true"></span>
-        <button type="button" data-t="tudo" aria-pressed="true">Tudo</button>
-        <button type="button" data-t="fundamentos" aria-pressed="false">Fundamentos</button>
-        <button type="button" data-t="jamf" aria-pressed="false">Jamf Pro</button>
-        <button type="button" data-t="iac" aria-pressed="false">Infra como código</button>
-        <button type="button" data-t="dex" aria-pressed="false">Experiência</button>
-        <button type="button" data-t="mw" aria-pressed="false">Modern Workplace</button>
-      </div>
-
-      <p class="contagem" id="contagem" role="status" aria-live="polite"></p>
-
-      <ul class="materiais" id="grade">
-        <li class="material" data-t="fundamentos">
-          <a href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">
-            <span class="trilha">Fundamentos</span>
-            <h3>O que é MDM e como o macOS e o iOS conversam com ele</h3>
-            <p>O protocolo da Apple de ponta a ponta: enrollment, notificações push, perfis, comandos e declarative device management.</p>
-          </a>
-        </li>
-        <li class="material" data-t="fundamentos">
-          <a href="https://learn.deividsantos.com.br/fundamentos/apple-business-manager-e-ade/">
-            <span class="trilha">Fundamentos</span>
-            <h3>Apple Business Manager e Automated Device Enrollment</h3>
-            <p>Como o ABM atribui dispositivos ao seu MDM e entrega Mac e iPhone prontos, sem ninguém encostar na máquina.</p>
-          </a>
-        </li>
-        <li class="material" data-t="fundamentos">
-          <a href="https://learn.deividsantos.com.br/fundamentos/supervisao-e-tipos-de-enrollment/">
-            <span class="trilha">Fundamentos</span>
-            <h3>Supervisão e tipos de enrollment: qual escolher</h3>
-            <p>ADE, enrollment iniciado pelo usuário e User Enrollment comparados, com o modelo certo para corporativo e BYOD.</p>
-          </a>
-        </li>
-        <li class="material" data-t="jamf">
-          <a href="https://learn.deividsantos.com.br/jamf-pro/smart-groups-e-extension-attributes/">
-            <span class="trilha">Jamf Pro</span>
-            <h3>Smart Groups e Extension Attributes: o par que organiza a frota</h3>
-            <p>Convenção de nomes, exemplo de script e as armadilhas de desempenho que aparecem quando a frota cresce.</p>
-          </a>
-        </li>
-        <li class="material" data-t="jamf">
-          <a href="https://learn.deividsantos.com.br/jamf-pro/scripts-para-producao/">
-            <span class="trilha">Jamf Pro</span>
-            <h3>Scripts que rodam em produção sem surpresas</h3>
-            <p>Um modelo em Bash com parâmetros, log, idempotência e tratamento de erro, mais as regras que evitam incidentes.</p>
-          </a>
-        </li>
-        <li class="material" data-t="iac">
-          <a href="https://learn.deividsantos.com.br/iac/iac-para-mdm-por-que-e-por-onde-comecar/">
-            <span class="trilha">Infra como código</span>
-            <h3>Infraestrutura como código para MDM: por onde começar</h3>
-            <p>Git como fonte da verdade, revisão em pull request e um caminho em quatro etapas para sair do console sem risco.</p>
-          </a>
-        </li>
-        <li class="material" data-t="iac">
-          <a href="https://learn.deividsantos.com.br/iac/pipeline-de-validacao-com-github-actions/">
-            <span class="trilha">Infra como código</span>
-            <h3>Pipeline de validação com GitHub Actions</h3>
-            <p>Valide perfis .mobileconfig e scripts Bash em cada pull request, e evolua para a aplicação controlada.</p>
-          </a>
-        </li>
-        <li class="material" data-t="dex">
-          <a href="https://learn.deividsantos.com.br/dex/o-que-e-dex-e-como-medir/">
-            <span class="trilha">Experiência</span>
-            <h3>O que é DEX e como medir em frotas Apple</h3>
-            <p>Quais indicadores acompanhar em Macs corporativos e como medir sem invadir a privacidade, respeitando a LGPD.</p>
-          </a>
-        </li>
-        <li class="material" data-t="dex">
-          <a href="https://learn.deividsantos.com.br/dex/sinais-de-dex-com-extension-attributes/">
-            <span class="trilha">Experiência</span>
-            <h3>Sinais de DEX no Mac: disco, reinício e bateria</h3>
-            <p>Três Extension Attributes em Bash e os Smart Groups prontos para acionar remediação quando o sinal piora.</p>
-          </a>
-        </li>
-        <li class="material" data-t="mw">
-          <a href="https://learn.deividsantos.com.br/modern-workplace/mapa-do-modern-workplace-apple/">
-            <span class="trilha">Modern Workplace</span>
-            <h3>Mapa do Modern Workplace Apple</h3>
-            <p>As cinco camadas, como elas se conectam e por onde começar a organizar a sua frota.</p>
-          </a>
-        </li>
-        <li class="material" data-t="mw">
-          <a href="https://learn.deividsantos.com.br/modern-workplace/platform-sso-visao-geral/">
-            <span class="trilha">Modern Workplace</span>
-            <h3>Platform SSO no macOS: requisitos e piloto</h3>
-            <p>As peças que ele exige, os métodos de autenticação e um plano de piloto em anéis para reduzir o risco.</p>
-          </a>
-        </li>
-        <li class="material" data-t="mw" data-roadmap>
-          <a href="https://learn.deividsantos.com.br/roadmap/">
-            <span class="trilha">Roadmap</span>
-            <h3>O que vem a seguir</h3>
-            <p>O que já está publicado e o que está em produção nas cinco trilhas. Sugestões de tema entram por aqui.</p>
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <section id="pilha" class="secao" aria-labelledby="t-pilha">
-      <div class="cabeca">
-        <h2 class="titulo" id="t-pilha">Gestão de frota não é uma ferramenta, é uma pilha</h2>
-        <p class="apoio">O dispositivo só chega pronto se a identidade estiver resolvida, e a segurança só se sustenta se a automação não depender de alguém lembrar de rodar. É em volta dessas quatro camadas que o material está organizado.</p>
-      </div>
-
-      <ul class="pilha">
-        <li>
-          <h3>Automação e IA</h3>
-          <p>Swift Dialog, Bash, Python e PowerShell. Infraestrutura como código para MDM, com Git como fonte da verdade, e agentes de IA integrados às APIs do Jamf Pro e do Microsoft Graph para inventário, relatórios e ações na frota.</p>
-        </li>
-        <li>
-          <h3>Segurança e conformidade</h3>
-          <p>Hardening com CIS Benchmarks, MITRE ATT&amp;CK como referência, agentes de endpoint empacotados e validados antes de instalar, e resposta a incidentes.</p>
-        </li>
-        <li>
-          <h3>Identidade e acesso</h3>
-          <p>Platform SSO, Entra ID e Okta, federação por SCIM e Jamf Connect com OIDC, ligando a conta corporativa ao login do Mac e às contas locais.</p>
-        </li>
-        <li>
-          <h3>Dispositivos</h3>
-          <p>MDM com Jamf Pro, Intune, Mosyle e Hexnode, zero-touch deployment com Apple Business Manager, migrações de macOS sem downtime e todo o ciclo de vida do equipamento.</p>
-        </li>
-      </ul>
-
-      <p class="transversal">Atravessando as quatro: a experiência de quem usa o equipamento. Nenhuma camada pode custar o dia de trabalho de alguém.</p>
-    </section>
-
-    <section id="pratica" class="secao" aria-labelledby="t-pratica">
-      <div class="cabeca">
-        <h2 class="titulo" id="t-pratica">De onde vem o que eu escrevo</h2>
-        <p class="apoio">Projetos em empresas de grande porte dos segmentos financeiro, mídia e tecnologia. Cada um deixou uma lição que virou material aberto.</p>
-      </div>
-
-      <ul class="praticas">
-        <li class="pratica">
-          <h3>Migração de 2.000 Macs entre plataformas de MDM</h3>
-          <p>Do Intune para o Jamf Pro, em cinco ondas, sem tirar ninguém do trabalho. Mecanismo que se aciona no próprio Mac com janelas de adiamento, aplicativo interno que dispensa suporte presencial e um script em Python, com Microsoft Graph, cruzando o andamento das equipes com o inventário.</p>
-          <p class="fecho"><strong>Toda a frota migrada</strong> entre outubro e novembro de 2025. Nenhum equipamento ficou para trás.</p>
-        </li>
-        <li class="pratica">
-          <h3>Identidade, do Apple Business Manager ao Jamf</h3>
-          <p>Federação do ABM com o Entra ID via SCIM e Jamf Connect com OIDC, criando as contas locais a partir do sAMAccountName mapeado pelo onPremisesSamAccountName, além da correção do binding de AD.</p>
-          <p class="fecho"><strong>O que aprendi:</strong> as funções Administrator e People Manager do ABM não podem ser federadas, e isso muda o desenho do acesso administrativo.</p>
-        </li>
-        <li class="pratica">
-          <h3>Troca do agente de segurança de endpoint</h3>
-          <p>Pacote do agente de rede separado do antivírus, validação antes da instalação, scripts de remoção e processo documentado para o time de segurança. No caminho, o diagnóstico de uma falha de verificação no JCDS e de um erro de instalador aninhado.</p>
-          <p class="fecho"><strong>O que aprendi:</strong> o certificado da inspeção SSL do antivírus provocava falhas silenciosas de HTTPS em outros agentes.</p>
-        </li>
-        <li class="pratica">
-          <h3>Um portal único para o time de campo</h3>
-          <p>Jamf, Intune, Apple Business Manager, Entra ID, antivírus e Defender reunidos em uma interface só, com back-end em FastAPI e front-end em React e TypeScript. Relatórios como código, com formulários orientados por Pydantic.</p>
-          <p class="fecho"><strong>Em desenvolvimento ativo</strong>, no centro do meu trabalho recente.</p>
-        </li>
-      </ul>
-
-      <div class="notas">
-        <ul>
-          <li>Platform SSO com Entra ID e Company Portal, pelo método SEK, incluindo a resolução de desvio de relógio e do mapeamento do claim oid.</li>
-          <li>Diagnóstico de falhas de autenticação 802.1X cabeada, com a causa-raiz em TLSTrustedServerNames.</li>
-          <li>Guias de implantação de software com extensão de kernel, usando Bootstrap Token e reinício via MDM.</li>
-          <li>Duas implantações do Jamf Pro do zero como consultor, do Apple Business Manager às políticas em produção.</li>
+      <div class="janela__corpo">
+        <p class="sub">O dispositivo só chega pronto se a identidade estiver resolvida. A segurança só se sustenta se a automação não depender de alguém lembrar de rodar.</p>
+        <ul class="ajustes" style="margin-top:14px">
+          <li><strong>Dispositivos</strong><p>Jamf Pro, Intune, Mosyle, Hexnode. Zero-touch com Apple Business Manager, migração de macOS sem downtime, ciclo de vida inteiro.</p></li>
+          <li><strong>Identidade</strong><p>Platform SSO, Entra ID, Okta. Federação por SCIM, Jamf Connect com OIDC, conta corporativa ligada ao login do Mac.</p></li>
+          <li><strong>Segurança</strong><p>CIS Benchmarks, MITRE ATT&amp;CK, agente de endpoint empacotado e validado antes de instalar, resposta a incidente.</p></li>
+          <li><strong>Automação e IA</strong><p>Swift Dialog, Bash, Python, PowerShell. MDM como código no Git e agentes de IA nas APIs do Jamf e do Microsoft Graph.</p></li>
         </ul>
       </div>
     </section>
 
-    <section id="trajetoria" class="secao" aria-labelledby="t-trajetoria">
-      <div class="cabeca">
-        <h2 class="titulo" id="t-trajetoria">Onde isso foi aprendido</h2>
+    <!-- Trajetória -->
+    <section class="janela" id="trajetoria" hidden style="--x:22%; --y:8%; --w:560px" aria-labelledby="t-trajetoria">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar Trajetória"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo" id="t-trajetoria">Trajetória</span>
       </div>
+      <div class="janela__corpo">
+        <div class="grupo">
+          <h2>Onde trabalhei</h2>
+          <ul class="linhas">
+            <li><span class="quando">2025 — hoje</span><div><strong>Globo</strong><p>Engenheiro de Modern Workplace. Cerca de 2.000 Macs em Jamf Pro, Intune, ABM e Entra ID.</p></div></li>
+            <li><span class="quando">2024 — 2025</span><div><strong>Localiza&amp;Co</strong><p>Analista Sr. Cerca de 500 equipamentos, Jamf Pro na engenharia de end user.</p></div></li>
+            <li><span class="quando">2021 — 2024</span><div><strong>Banco PAN</strong><p>IT Analyst e Sr. Cerca de 400 equipamentos, Jamf para macOS e iOS.</p></div></li>
+            <li><span class="quando">2019 — 2021</span><div><strong>BTG Pactual</strong><p>IT Analyst. Cerca de 300 equipamentos, implantação do Jamf Pro.</p></div></li>
+            <li><span class="quando">2018 — 2026</span><div><strong>MACBR</strong><p>Consultoria, em paralelo. Duas implantações do Jamf Pro do zero, mais rack, firewall e Wi-Fi.</p></div></li>
+            <li><span class="quando">2011 — 2019</span><div><strong>Suporte e infraestrutura</strong><p>De suporte mobile na TIM a redes, servidores e VoIP em cinco empresas.</p></div></li>
+          </ul>
+        </div>
 
-      <div class="duas">
-        <ol class="tempo">
-          <li>
-            <span class="quando">2025 — hoje</span>
-            <div>
-              <h3>Especialista em Modern Workplace <span>· Globo</span></h3>
-              <p>Cerca de 2.000 Macs. Jamf Pro, Intune, Apple Business Manager, Entra ID, segurança de endpoint e automação, com roadmap focado na jornada de quem usa a tecnologia.</p>
-            </div>
-          </li>
-          <li>
-            <span class="quando">2024 — 2025</span>
-            <div>
-              <h3>Analista de Suporte Sr <span>· Localiza&amp;Co</span></h3>
-              <p>Cerca de 500 equipamentos. Ambiente macOS e Jamf Pro na engenharia de end user, com hardening e suporte nível III e IV.</p>
-            </div>
-          </li>
-          <li>
-            <span class="quando">2021 — 2024</span>
-            <div>
-              <h3>IT Analyst e SR IT Analyst <span>· Banco PAN</span></h3>
-              <p>Cerca de 400 equipamentos. Implantação e operação do Jamf para macOS e iOS, conformidade e automações.</p>
-            </div>
-          </li>
-          <li>
-            <span class="quando">2019 — 2021</span>
-            <div>
-              <h3>IT Analyst <span>· BTG Pactual</span></h3>
-              <p>Cerca de 300 equipamentos. Implantação do Jamf Pro e automação do ciclo de contas de usuário.</p>
-            </div>
-          </li>
-          <li>
-            <span class="quando">2018 — 2026</span>
-            <div>
-              <h3>Consultoria de TI <span>· MACBR, em paralelo</span></h3>
-              <p>Duas implantações do Jamf Pro do zero, zero-touch deployment, hardening com CIS Benchmarks e projetos de infraestrutura.</p>
-            </div>
-          </li>
-          <li>
-            <span class="quando">2011 — 2019</span>
-            <div>
-              <h3>Suporte, redes e infraestrutura</h3>
-              <p>De suporte mobile na TIM a redes, servidores, firewall e VoIP em Icomm, Suzukitec, Zero Informática, Penso e Vip Office.</p>
-            </div>
-          </li>
-        </ol>
+        <div class="grupo">
+          <h2>O que fiz que vale contar</h2>
+          <ul class="linhas">
+            <li><div><strong>Migrei 2.000 Macs do Intune para o Jamf Pro</strong><p>Em cinco ondas, entre outubro e novembro de 2025. O Mac se migrava sozinho, com janela de adiamento para a pessoa escolher a hora. Nenhum equipamento ficou para trás.</p></div></li>
+            <li><div><strong>Liguei a identidade corporativa ao Mac</strong><p>ABM federado com o Entra ID por SCIM e Jamf Connect com OIDC. Aprendi na marca que as funções Administrator e People Manager do ABM não podem ser federadas.</p></div></li>
+            <li><div><strong>Troquei o agente de segurança da frota</strong><p>Pacote de rede separado do antivírus, validação antes de instalar e script de remoção. O certificado da inspeção SSL derrubava o HTTPS de outros agentes, em silêncio.</p></div></li>
+            <li><div><strong>Estou construindo um portal para o time de campo</strong><p>Jamf, Intune, ABM, Entra ID e antivírus numa tela só. FastAPI atrás, React na frente.</p></div></li>
+          </ul>
+        </div>
 
-        <div>
-          <div class="bloco">
-            <h3>Certificações</h3>
-            <ul class="certs">
-              <li><span>Jamf Management Engineer</span><span class="quando">ago. 2025</span></li>
-              <li><span>Jamf Management Consultant</span><span class="quando">mar. 2025</span></li>
-              <li><span>Jamf Certified Associate, Jamf Protect</span><span class="quando">jun. 2024</span></li>
-              <li><span>Jamf Certified Associate, Jamf Pro</span><span class="quando">jun. 2021</span></li>
-              <li><span>Ethical Hacker, Cisco</span><span class="quando">out. 2024</span></li>
-              <li><span>Introduction to Cybersecurity, Cisco</span><span class="quando">out. 2024</span></li>
-            </ul>
-            <details class="recolhe">
-              <summary>Mais seis certificados</summary>
-              <ul class="certs">
-                <li><span>Scrum Fundamentals, Udemy</span><span class="quando">jul. 2019</span></li>
-                <li><span>Python Básico, Solyd Offensive Security</span><span class="quando">jun. 2019</span></li>
-                <li><span>Algoritimo, curso em vídeo</span><span class="quando">jun. 2019</span></li>
-                <li><span>pfSense, Udemy</span><span class="quando">nov. 2017</span></li>
-                <li><span>ISO/IEC 27.002, Udemy</span><span class="quando">abr. 2017</span></li>
-                <li><span>Computer Forensics Foundation, ITCERTS</span><span class="quando">fev. 2017</span></li>
-              </ul>
-            </details>
-          </div>
-
-          <div class="bloco">
-            <h3>Comunidade</h3>
-            <p>Administro a <strong>Brazil Apple Admins</strong>, no Jamf Community. Apresentei o briefing do WWDC26 no encontro virtual da comunidade e levei “Gerenciando Apple como Apple” ao 1º Sejunta Summit Corporativo.</p>
-            <p>Formado em Redes de Computadores pela Anhanguera. Credenciais conferíveis no <a href="https://www.linkedin.com/in/santosdeivid/details/certifications/">LinkedIn</a>.</p>
-          </div>
+        <div class="grupo">
+          <h2>Certificações</h2>
+          <ul class="linhas">
+            <li><span class="quando">ago. 2025</span><div><strong>Jamf Management Engineer</strong></div></li>
+            <li><span class="quando">mar. 2025</span><div><strong>Jamf Management Consultant</strong><p>Expira em março de 2027.</p></div></li>
+            <li><span class="quando">jun. 2024</span><div><strong>Jamf Certified Associate, Jamf Protect</strong></div></li>
+            <li><span class="quando">jun. 2021</span><div><strong>Jamf Certified Associate, Jamf Pro</strong></div></li>
+            <li><span class="quando">out. 2024</span><div><strong>Ethical Hacker e Introduction to Cybersecurity</strong><p>Cisco. Mais seis certificados em segurança, redes e Python, no <a href="https://www.linkedin.com/in/santosdeivid/details/certifications/">LinkedIn</a>.</p></div></li>
+            <li><span class="quando">2015 — 2017</span><div><strong>Tecnólogo em Redes de Computadores</strong><p>Anhanguera Educacional.</p></div></li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section id="sobre" class="secao" aria-labelledby="t-sobre">
-      <div class="sobre">
-        <div>
-          <h2 id="t-sobre">Por que eu escrevo</h2>
-          <p>Comecei em suporte mobile na TIM, em 2011, e passei por redes, servidores e infraestrutura até chegar aos dispositivos Apple corporativos, em 2019. Quase tudo que aprendi veio de documentação em inglês, de fórum e de tentativa e erro em produção.</p>
-          <p>Falta material em português para quem administra Apple em empresa no Brasil. É isso que estou escrevendo, uma lição por vez, sem vender nada e sem vínculo com fabricante.</p>
-        </div>
+    <!-- Contato -->
+    <section class="janela" id="contato" hidden style="--x:50%; --y:40%; --w:380px" aria-labelledby="t-contato">
+      <div class="janela__barra">
+        <span class="luzes">
+          <button class="luz luz--fechar" type="button" data-fechar aria-label="Fechar Contato"></button>
+          <span class="luz luz--min" aria-hidden="true"></span>
+          <span class="luz luz--max" aria-hidden="true"></span>
+        </span>
+        <span class="janela__titulo" id="t-contato">Contato</span>
       </div>
-    </section>
-
-    <section class="fecho-leitura" aria-labelledby="t-fecho">
-      <p class="fecho-leitura__rotulo">Comece por</p>
-      <h2 id="t-fecho">O que é MDM e como o macOS e o iOS conversam com ele</h2>
-      <p>O protocolo da Apple de ponta a ponta: enrollment, notificações push, perfis, comandos e declarative device management. É a base de tudo o que vem depois.</p>
-      <p class="acoes">
-        <a class="botao botao--azul" href="https://learn.deividsantos.com.br/fundamentos/o-que-e-mdm/">Ler esta lição</a>
-        <a class="botao" href="https://learn.deividsantos.com.br/">Ver as onze</a>
-      </p>
+      <div class="janela__corpo">
+        <p class="sub">Correção, dúvida técnica, convite para evento ou tema novo para uma lição.</p>
+        <ul class="contatos" style="margin-top:12px">
+          <li><span>E-mail</span><a href="mailto:dnsto@icloud.com">dnsto@icloud.com</a></li>
+          <li><span>LinkedIn</span><a href="https://www.linkedin.com/in/santosdeivid">/in/santosdeivid</a></li>
+          <li><span>GitHub</span><a href="https://github.com/dnsantos">@dnsantos</a></li>
+          <li><span>Lições</span><a href="https://learn.deividsantos.com.br/">learn.deividsantos.com.br</a></li>
+        </ul>
+        <p class="aviso">Conteúdo independente, sem afiliação, patrocínio ou endosso de Apple, Jamf ou Microsoft. As opiniões são pessoais e não representam empregadores. As marcas citadas pertencem aos seus donos. © 2026 Deivid Santos.</p>
+      </div>
     </section>
   </main>
 
-  <footer class="rodape envelope">
-    <div class="rodape__linha">
-      <span>© 2026 Deivid Santos, São Paulo</span>
-      <span>Correção, dúvida ou tema novo: <a href="mailto:dnsto@icloud.com">dnsto@icloud.com</a></span>
-    </div>
-    <div class="rodape__linha">
-      <span><a href="https://learn.deividsantos.com.br/">Modern Workplace na prática</a> &nbsp; <a href="/llms.txt">llms.txt</a></span>
-      <span><a href="https://www.linkedin.com/in/santosdeivid">LinkedIn</a> &nbsp; <a href="https://github.com/dnsantos">GitHub</a></span>
-    </div>
-    <p>Conteúdo independente, sem afiliação, patrocínio ou endosso de Apple, Jamf ou Microsoft. As opiniões são pessoais e não representam empregadores. Marcas citadas pertencem aos seus donos.</p>
-  </footer>
+  <nav class="dock" aria-label="Abrir janelas">
+    <button type="button" data-abrir="sobre" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#5b7cfa,#2f4ed8)" aria-hidden="true">D</span><span class="rotulo">Sobre</span></button>
+    <button type="button" data-abrir="licoes" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#ffd166,#e8941a);--letra:#2a1c00" aria-hidden="true">L</span><span class="rotulo">Lições</span></button>
+    <button type="button" data-abrir="comecar" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#4fd38a,#17915a);--letra:#04281a" aria-hidden="true">C</span><span class="rotulo">Por onde começar</span></button>
+    <button type="button" data-abrir="pilha" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#9b8cff,#5a39d6)" aria-hidden="true">P</span><span class="rotulo">A pilha</span></button>
+    <button type="button" data-abrir="trajetoria" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#ff8a7a,#d8432f);--letra:#2e0a04" aria-hidden="true">T</span><span class="rotulo">Trajetória</span></button>
+    <button type="button" data-abrir="contato" aria-pressed="false"><span class="icone" style="background:linear-gradient(160deg,#6fd6e8,#1b8aa6);--letra:#04252e" aria-hidden="true">@</span><span class="rotulo">Contato</span></button>
+  </nav>
 
   <script>
     (function () {
-      var barra = document.getElementById('segmentado');
-      var grade = document.getElementById('grade');
-      var contagem = document.getElementById('contagem');
-      var itens = grade ? grade.querySelectorAll('.material') : [];
-      if (!barra || !itens.length) return;
+      var area = document.getElementById('area');
+      var janelas = Array.prototype.slice.call(document.querySelectorAll('.janela'));
+      var gatilhos = Array.prototype.slice.call(document.querySelectorAll('[data-abrir]'));
+      var z = 10;
+      var telaPequena = function () { return window.matchMedia('(max-width: 46rem)').matches; };
 
-      var botoes = Array.prototype.slice.call(barra.querySelectorAll('button[data-t]'));
-      var polegar = document.getElementById('polegar');
-      var navBarra = document.querySelector('.barra nav');
-      var ativo = barra.querySelector('button[aria-pressed="true"]') || botoes[0];
-
-      barra.hidden = false;
-
-      function mover(b) {
-        if (!polegar) return;
-        polegar.style.width = b.offsetWidth + 'px';
-        polegar.style.transform = 'translateX(' + (b.offsetLeft - 4) + 'px)';
-      }
-
-      function aplicar(b, focar) {
-        var t = b.getAttribute('data-t');
-        var licoes = 0;
-        var roadmap = false;
-        ativo = b;
-        botoes.forEach(function (x) {
-          var on = x === b;
-          x.setAttribute('aria-pressed', on ? 'true' : 'false');
-          x.tabIndex = on ? 0 : -1;
-        });
-        mover(b);
-        itens.forEach(function (li) {
-          var mostra = t === 'tudo' || li.getAttribute('data-t') === t;
-          li.hidden = !mostra;
-          if (!mostra) return;
-          if (li.hasAttribute('data-roadmap')) roadmap = true;
-          else licoes++;
-        });
-        if (contagem) {
-          contagem.textContent = licoes + (licoes === 1 ? ' lição' : ' lições')
-            + (t === 'tudo' ? ' e o roadmap' : ' em ' + b.textContent.trim());
+      function posicionar(j) {
+        if (telaPequena()) { j.style.left = ''; j.style.top = ''; j.style.width = ''; return; }
+        var cs = getComputedStyle(j);
+        var w = parseInt(cs.getPropertyValue('--w'), 10) || 460;
+        var largura = Math.min(w, area.clientWidth - 32);
+        j.style.width = largura + 'px';
+        if (!j.dataset.posto) {
+          var x = (parseFloat(cs.getPropertyValue('--x')) / 100) * area.clientWidth;
+          var y = (parseFloat(cs.getPropertyValue('--y')) / 100) * area.clientHeight;
+          j.style.left = Math.max(12, Math.min(x, area.clientWidth - largura - 12)) + 'px';
+          j.style.top = Math.max(12, y) + 'px';
+          j.dataset.posto = '1';
         }
-        if (focar) {
-          b.focus();
-          b.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        // A janela nunca passa por baixo do Dock.
+        var limite = area.clientHeight - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--dock-h'), 10) - 18;
+        if (j.offsetHeight) {
+          var topo = Math.min(parseInt(j.style.top, 10) || 12, Math.max(12, limite - j.offsetHeight));
+          j.style.top = topo + 'px';
         }
       }
 
-      // A máscara de corte só aparece quando a faixa realmente rola.
-      function marcarRolagem() {
-        [barra, navBarra].forEach(function (el) {
-          if (!el) return;
-          if (el.scrollWidth - el.clientWidth > 4) el.setAttribute('data-rola', '');
-          else el.removeAttribute('data-rola');
+      function frente(j) {
+        janelas.forEach(function (o) { o.classList.toggle('janela--frente', o === j); });
+        j.style.zIndex = ++z;
+      }
+
+      function marcar() {
+        gatilhos.forEach(function (b) {
+          var alvo = document.getElementById(b.dataset.abrir);
+          if (b.hasAttribute('aria-pressed')) b.setAttribute('aria-pressed', alvo && !alvo.hidden ? 'true' : 'false');
         });
       }
 
-      requestAnimationFrame(function () { aplicar(ativo, false); marcarRolagem(); });
-      window.addEventListener('resize', function () { mover(ativo); marcarRolagem(); });
+      function abrir(id, focar) {
+        var j = document.getElementById(id);
+        if (!j) return;
+        j.hidden = false;
+        posicionar(j);
+        frente(j);
+        marcar();
+        if (telaPequena()) j.scrollIntoView();
+        if (focar !== false) {
+          var alvo = j.querySelector('.janela__corpo');
+          alvo.setAttribute('tabindex', '-1');
+          alvo.focus({ preventScroll: true });
+        }
+      }
 
-      barra.addEventListener('click', function (e) {
-        var b = e.target.closest('button[data-t]');
-        if (b) aplicar(b, false);
+      function fechar(j) {
+        j.hidden = true;
+        marcar();
+        var viva = janelas.filter(function (o) { return !o.hidden; }).pop();
+        if (viva) frente(viva);
+      }
+
+      gatilhos.forEach(function (b) {
+        b.addEventListener('click', function () { abrir(b.dataset.abrir); });
       });
 
-      // Setas navegam entre as trilhas, como num controle segmentado do sistema.
-      barra.addEventListener('keydown', function (e) {
-        var i = botoes.indexOf(document.activeElement);
-        if (i < 0) return;
-        var n = null;
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') n = (i + 1) % botoes.length;
-        else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') n = (i - 1 + botoes.length) % botoes.length;
-        else if (e.key === 'Home') n = 0;
-        else if (e.key === 'End') n = botoes.length - 1;
-        if (n === null) return;
-        e.preventDefault();
-        aplicar(botoes[n], true);
+      janelas.forEach(function (j) {
+        posicionar(j);
+        j.addEventListener('mousedown', function () { frente(j); });
+        j.addEventListener('focusin', function () { frente(j); });
+        j.querySelector('[data-fechar]').addEventListener('click', function () { fechar(j); });
+
+        // Arrastar pela barra de título, como em qualquer janela.
+        var barra = j.querySelector('.janela__barra');
+        barra.addEventListener('pointerdown', function (e) {
+          if (telaPequena() || e.target.closest('button')) return;
+          var r = j.getBoundingClientRect();
+          var dx = e.clientX - r.left;
+          var dy = e.clientY - r.top;
+          frente(j);
+          barra.setPointerCapture(e.pointerId);
+          function mover(ev) {
+            var x = Math.min(Math.max(0, ev.clientX - dx), window.innerWidth - r.width);
+            var y = Math.min(Math.max(0, ev.clientY - dy - area.offsetTop), area.clientHeight - 48);
+            j.style.left = x + 'px';
+            j.style.top = y + 'px';
+          }
+          function soltar() {
+            barra.removeEventListener('pointermove', mover);
+            barra.removeEventListener('pointerup', soltar);
+          }
+          barra.addEventListener('pointermove', mover);
+          barra.addEventListener('pointerup', soltar);
+        });
       });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key !== 'Escape') return;
+        var topo = janelas.filter(function (o) { return !o.hidden; })
+          .sort(function (a, b) { return (+a.style.zIndex || 0) - (+b.style.zIndex || 0); }).pop();
+        if (topo) fechar(topo);
+      });
+
+      window.addEventListener('resize', function () {
+        janelas.forEach(function (j) { if (!j.hidden) posicionar(j); });
+      });
+
+      // Uma âncora na URL abre a janela correspondente.
+      if (location.hash) abrir(location.hash.slice(1), false);
+      frente(document.getElementById('licoes'));
+      frente(document.getElementById('sobre'));
+      marcar();
     })();
   </script>
 </body>
