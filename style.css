@@ -980,7 +980,11 @@ button:focus-visible {
   border-bottom: 1px solid var(--borda);
 }
 
-.rodape__linha a { color: var(--tinta-2); }
+.rodape__linha a {
+  display: inline-block;
+  padding-block: 0.3rem;
+  color: var(--tinta-2);
+}
 .rodape__linha a:hover { color: var(--tinta); }
 
 .rodape p { max-width: 70ch; }
