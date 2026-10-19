@@ -14,8 +14,9 @@
   --mesa-3: #123c63;
   --mesa-4: #10203f;
 
-  --janela: #1e1f24;
-  --janela-barra: #2b2d33;
+  --janela: #1e1f24e8;
+  --janela-solida: #1e1f24;
+  --janela-barra: #2b2d33d9;
   --janela-borda: #000;
   --separador: #ffffff14;
   --realce: #ffffff0f;
@@ -43,8 +44,9 @@
     --mesa-3: #aac6e8;
     --mesa-4: #b9cdf2;
 
-    --janela: #f6f6f8;
-    --janela-barra: #e9e9ed;
+    --janela: #f6f6f8e8;
+    --janela-solida: #f6f6f8;
+    --janela-barra: #e9e9edd6;
     --janela-borda: #00000026;
     --separador: #0000001a;
     --realce: #00000010;
@@ -244,9 +246,14 @@ a {
   display: flex;
   flex-direction: column;
   max-height: calc(100vh - var(--barra-h) - var(--dock-h) - 24px);
-  border-radius: 11px;
+  border-radius: 14px;
   background: var(--janela);
+  backdrop-filter: blur(34px) saturate(170%);
+  -webkit-backdrop-filter: blur(34px) saturate(170%);
   border: 1px solid var(--janela-borda);
+  /* Janela de fundo recua em cor; a da frente fica saturada e nítida. */
+  filter: saturate(0.72);
+  transition: filter 0.2s ease;
   box-shadow: 0 0 0 0.5px #ffffff1a, 0 1px 2px #0000006b, 0 10px 24px -10px #00000094, 0 22px 44px -22px #0000008c;
   overflow: hidden;
 }
@@ -259,7 +266,14 @@ a {
 
 .janela[hidden] { display: none; }
 
-.janela--frente { z-index: 50; }
+.janela--frente {
+  z-index: 50;
+  filter: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .janela { transition: none; }
+}
 
 .janela__barra {
   flex: 0 0 auto;
@@ -385,10 +399,29 @@ p { margin: 0; }
 }
 
 .acoes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
+  display: inline-flex;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.acoes .bt {
+  border: 1px solid var(--separador);
+  border-radius: 0;
+  margin-left: -1px;
+}
+
+.acoes .bt:first-child {
+  margin-left: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.acoes .bt:last-child {
+  border-radius: 0 8px 8px 0;
+}
+
+.acoes .bt--azul {
+  background: var(--selecao);
+  color: #fff;
 }
 
 .bt {
@@ -435,7 +468,7 @@ p { margin: 0; }
   position: sticky;
   top: 0;
   z-index: 2;
-  background: var(--janela-barra);
+  background: var(--janela-solida);
   border-bottom: 1px solid var(--separador);
   color: var(--tinta-2);
   font-size: 12px;
@@ -499,7 +532,7 @@ p { margin: 0; }
   position: sticky;
   bottom: 0;
   padding: 7px 22px;
-  background: var(--janela-barra);
+  background: var(--janela-solida);
   border-top: 1px solid var(--separador);
   color: var(--tinta-2);
   font-size: 12.5px;
@@ -755,7 +788,7 @@ p { margin: 0; }
     max-height: none;
     left: 0 !important;
     top: var(--barra-h) !important;
-    border-radius: 14px 14px 0 0;
+    border-radius: 16px 16px 0 0;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
