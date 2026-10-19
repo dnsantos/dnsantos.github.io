@@ -1,6 +1,261 @@
-git clone https://github.com/dnsantos/dnsantos.github.io.git /tmp/meu-site && \
-cd /tmp/meu-site && \
-pbpaste > index.html && \
-git add index.html && \
-git commit -m "feat: novo site pessoal AI-Native & Endpoint Engineering" && \
-git push origin main
+<!DOCTYPE html>
+<html lang="pt-BR" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deívid Neves dos Santos | AI-Native & Endpoint Engineering</title>
+  <meta name="description" content="Portfólio de Engenharia de Endpoint, Apple Enterprise Management, MDM as Code (GitOps) e Arquitetura AI-Native." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            bg: '#09090b',
+            surface: '#121215',
+            border: '#27272a',
+            accent: '#3b82f6'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #09090b; color: #f4f4f5; }
+    .glass { background: rgba(18, 18, 21, 0.75); backdrop-filter: blur(12px); }
+    .grid-bg {
+      background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-blue-500/30 selection:text-blue-200 grid-bg min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 glass border-b border-zinc-800/80">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="h-2.5 w-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-mono text-sm font-semibold tracking-tight text-zinc-100">~/dnsantos</span>
+        <span class="hidden sm:inline-block text-xs font-mono text-zinc-500 border border-zinc-800 rounded px-2 py-0.5 bg-zinc-900/60">dnsantos.github.io</span>
+      </div>
+      <nav class="hidden md:flex items-center gap-6 text-sm text-zinc-400">
+        <a href="#engenharia" class="hover:text-white transition">Arquitetura</a>
+        <a href="#ecossistema" class="hover:text-white transition">Ecossistema</a>
+        <a href="#stack" class="hover:text-white transition">Stack & GitOps</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/dnsantos" target="_blank" rel="noopener" class="text-xs font-mono px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 transition">
+          GitHub @dnsantos ↗
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 max-w-6xl w-full mx-auto px-6 py-12 md:py-20 space-y-24">
+
+    <!-- Hero Section -->
+    <section class="grid lg:grid-cols-12 gap-10 items-center">
+      <div class="lg:col-span-7 space-y-6">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-300 text-xs font-mono">
+          <span>AI-Native Endpoint & Security Engineering</span>
+        </div>
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight text-white leading-[1.12]">
+          Deívid Neves dos Santos
+        </h1>
+        <p class="text-lg text-zinc-400 leading-relaxed max-w-2xl">
+          Tech Lead & Especialista em Engenharia de Endpoint focado em <strong class="text-zinc-200 font-medium">Apple Device Management</strong>, <strong class="text-zinc-200 font-medium">Endpoint Security</strong> e automação <strong class="text-zinc-200 font-medium">MDM-as-Code</strong> assistida por IA. Construindo infraestrutura moderna, silenciosa e resiliente em escala corporativa.
+        </p>
+        <div class="flex flex-wrap gap-3 pt-2">
+          <a href="#ecossistema" class="px-4 py-2.5 rounded-lg bg-white text-zinc-950 font-medium text-sm hover:bg-zinc-200 transition">
+            Explorar Iniciativas
+          </a>
+          <a href="https://github.com/dnsantos" target="_blank" rel="noopener" class="px-4 py-2.5 rounded-lg border border-zinc-800 bg-zinc-900/70 text-zinc-200 font-mono text-sm hover:border-zinc-700 transition">
+            gh repo list @dnsantos
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive Terminal -->
+      <div class="lg:col-span-5">
+        <div class="rounded-xl border border-zinc-800 bg-[#0c0c0f] shadow-2xl overflow-hidden">
+          <div class="flex items-center justify-between px-4 py-2.5 border-b border-zinc-800 bg-zinc-900/60">
+            <div class="flex items-center gap-1.5">
+              <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+            </div>
+            <div class="flex gap-1 font-mono text-[11px]">
+              <button onclick="setTab('gitops')" id="btn-gitops" class="px-2 py-0.5 rounded bg-zinc-800 text-zinc-100">gitops.zsh</button>
+              <button onclick="setTab('santa')" id="btn-santa" class="px-2 py-0.5 rounded text-zinc-400 hover:text-zinc-200">santa.plist</button>
+              <button onclick="setTab('whoami')" id="btn-whoami" class="px-2 py-0.5 rounded text-zinc-400 hover:text-zinc-200">whoami.json</button>
+            </div>
+          </div>
+
+          <div class="p-5 font-mono text-xs leading-relaxed overflow-x-auto min-h-[250px]">
+            <pre id="tab-gitops" class="text-zinc-300"><span class="text-emerald-400">deivid@mac-studio</span> <span class="text-blue-400">~/mdm-iac</span> % agy deploy --fleet prod
+<span class="text-zinc-500"># Validating MDM-as-Code manifests...</span>
+✓ Jamf Pro Smart Groups & Policies synced
+✓ Microsoft Intune Compliance & Remediations verified
+✓ Google Santa binary allowlist compiled (SHA-256)
+✓ swiftDialog zero-touch onboarding workflow active
+
+<span class="text-emerald-400">Status:</span> <span class="text-zinc-100">Zero-drift across macOS & Windows endpoints.</span></pre>
+
+            <pre id="tab-santa" class="text-zinc-300 hidden"><span class="text-zinc-500">&lt;!-- Google Santa + MDM Execution Control --&gt;</span>
+&lt;dict&gt;
+  &lt;key&gt;ClientMode&lt;/key&gt;
+  &lt;integer&gt;2&lt;/integer&gt; <span class="text-emerald-400">&lt;!-- Lockdown Mode --&gt;</span>
+  &lt;key&gt;EnableBundles&lt;/key&gt;
+  &lt;true/&gt;
+  &lt;key&gt;AllowedPathRegex&lt;/key&gt;
+  &lt;string&gt;^/Applications/Approved/.*&lt;/string&gt;
+&lt;/dict&gt;</pre>
+
+            <pre id="tab-whoami" class="text-zinc-300 hidden">{
+  "name": "Deívid Neves dos Santos",
+  "role": "AI-Native Endpoint & Security Engineer",
+  "certifications": ["Jamf Pro Certified", "Jamf 170"],
+  "community": "Founder @ Brazil Apple Admins",
+  "platforms": ["macOS", "iOS", "Windows", "Linux"]
+}</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Pillars -->
+    <section id="engenharia" class="space-y-8">
+      <div class="space-y-2">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">01 // Arquitetura & Engenharia</h2>
+        <p class="text-2xl font-semibold text-white">Pilares de Atuação Técnica</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-xl border border-zinc-800/90 bg-surface/70 space-y-3 hover:border-zinc-700 transition">
+          <div class="text-xs font-mono text-emerald-400">AI-NATIVE & GITOPS</div>
+          <h3 class="text-lg font-semibold text-white">MDM as Code & Automação Inteligente</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Gerenciamento declarativo de frotas tratando configurações de MDM, perfis mobileconfig, scripts zsh/PowerShell e políticas de conformidade como código versionado e auditável assistido por agentes de IA.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-zinc-800/90 bg-surface/70 space-y-3 hover:border-zinc-700 transition">
+          <div class="text-xs font-mono text-blue-400">MODERN WORKPLACE</div>
+          <h3 class="text-lg font-semibold text-white">Apple Enterprise & Multi-Platform</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Arquitetura avançada em Jamf Pro, Jamf Connect, Jamf Protect, Apple Business Manager, Microsoft Intune e Entra ID, garantindo provisionamento zero-touch e experiência fluida para o usuário final (DEX).
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-zinc-800/90 bg-surface/70 space-y-3 hover:border-zinc-700 transition">
+          <div class="text-xs font-mono text-amber-400">ENDPOINT SECURITY</div>
+          <h3 class="text-lg font-semibold text-white">Controle de Execução & Compliance</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Implementação de políticas de Zero Trust no endpoint, bloqueio de execução por hash e certificado com Google Santa, telemetria de segurança, remedições proativas e gestão de vulnerabilidades em macOS e Windows.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl border border-zinc-800/90 bg-surface/70 space-y-3 hover:border-zinc-700 transition">
+          <div class="text-xs font-mono text-purple-400">DEVELOPER & EMPLOYEE EXPERIENCE</div>
+          <h3 class="text-lg font-semibold text-white">Automação com swiftDialog & Full-Stack Tools</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Desenvolvimento de fluxos interativos nativos no macOS com swiftDialog e aplicações web modernas (React, Vite, Tailwind, Supabase) para autoatendimento, observabilidade e governança de TI.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ecosystem & Community -->
+    <section id="ecossistema" class="space-y-8">
+      <div class="space-y-2">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">02 // Ecossistema & Comunidade</h2>
+        <p class="text-2xl font-semibold text-white">Liderança Técnica, Comunidade & Consultoria</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/40 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Comunidade</span>
+            <h3 class="text-lg font-semibold text-white pt-1">Brazil Apple Admins</h3>
+            <p class="text-sm text-zinc-400">
+              Fundador e administrador da comunidade brasileira de engenheiros e administradores de ambientes Apple corporativos. Encontros técnicos, debates pós-WWDC e troca de boas práticas no Jamf Nation.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-zinc-500">Fundada em 2025 • Brasil</span>
+        </div>
+
+        <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/40 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">Consultoria Independente</span>
+            <h3 class="text-lg font-semibold text-white pt-1">MACBR Tecnologia</h3>
+            <p class="text-sm text-zinc-400">
+              Consultoria independente especializada em arquitetura Apple Enterprise, implementação de MDM e portal de conteúdo técnico MACBR Pulse.
+            </p>
+          </div>
+          <a href="https://macbr.co" target="_blank" rel="noopener" class="text-xs font-mono text-blue-400 hover:underline">Acessar macbr.co ↗</a>
+        </div>
+
+        <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/40 flex flex-col justify-between space-y-4">
+          <div class="space-y-2">
+            <span class="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">Speaker & Research</span>
+            <h3 class="text-lg font-semibold text-white pt-1">307Conf & Palestras</h3>
+            <p class="text-sm text-zinc-400">
+              Apresentações técnicas sobre segurança em macOS, bloqueio de execução com Google Santa via MDM e estratégias modernas de engenharia de endpoint.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-zinc-500">Apple Security & MDM Control</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section id="stack" class="space-y-6">
+      <div class="space-y-2">
+        <h2 class="text-xs font-mono uppercase tracking-widest text-blue-400">03 // Ferramentas & Tecnologias</h2>
+        <p class="text-2xl font-semibold text-white">Stack Técnica</p>
+      </div>
+      <div class="flex flex-wrap gap-2 font-mono text-xs">
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">Jamf Pro / Protect / Connect</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">Apple Business Manager</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">Microsoft Intune & Entra ID</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">Google Santa</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">swiftDialog</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">Zsh / Bash / PowerShell</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">AI Agents & CLI Workflows</span>
+        <span class="px-3 py-1.5 rounded-lg border border-zinc-800 bg-zinc-900 text-zinc-300">React / Vite / Tailwind / Supabase</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-zinc-900 py-8 mt-16">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-mono">
+      <div>© 2026 Deívid Neves dos Santos. Hospedado no GitHub Pages.</div>
+      <div class="flex gap-4">
+        <a href="https://github.com/dnsantos" target="_blank" rel="noopener" class="hover:text-zinc-300">GitHub</a>
+        <a href="https://macbr.co" target="_blank" rel="noopener" class="hover:text-zinc-300">MACBR</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function setTab(tab) {
+      ['gitops', 'santa', 'whoami'].forEach(t => {
+        document.getElementById('tab-' + t).classList.add('hidden');
+        document.getElementById('btn-' + t).className = 'px-2 py-0.5 rounded text-zinc-400 hover:text-zinc-200';
+      });
+      document.getElementById('tab-' + tab).classList.remove('hidden');
+      document.getElementById('btn-' + tab).className = 'px-2 py-0.5 rounded bg-zinc-800 text-zinc-100';
+    }
+  </script>
+</body>
+</html>
