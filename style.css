@@ -188,9 +188,47 @@ a {
 
 .barra__dir a:hover { background: var(--realce); }
 
+.relogio {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+  color: var(--tinta);
+  white-space: nowrap;
+}
+
+/* Indicador de bateria, como o da barra de menus */
+.bateria {
+  position: relative;
+  width: 24px;
+  height: 11px;
+  border: 1.2px solid color-mix(in srgb, var(--tinta) 55%, transparent);
+  border-radius: 3.5px;
+}
+
+.bateria::before {
+  content: '';
+  position: absolute;
+  inset: 1.4px;
+  width: 13px;
+  border-radius: 1.6px;
+  background: color-mix(in srgb, var(--tinta) 85%, transparent);
+}
+
+.bateria::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 3px;
+  width: 1.8px;
+  height: 4px;
+  margin-left: 1.2px;
+  border-radius: 0 1.5px 1.5px 0;
+  background: color-mix(in srgb, var(--tinta) 55%, transparent);
+}
+
 @media (max-width: 46rem) {
   .barra__menus button:nth-child(n + 3) { display: none; }
-  .barra__dir .so-largo { display: none; }
+  .barra__dir .so-largo,
+  .barra__dir .bateria { display: none; }
 }
 
 /* ───── Área das janelas ───── */

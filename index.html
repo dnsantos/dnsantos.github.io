@@ -78,7 +78,8 @@
     </nav>
     <div class="barra__dir">
       <a class="so-largo" href="https://learn.deividsantos.com.br/">learn.deividsantos.com.br</a>
-      <span>São Paulo</span>
+      <span class="bateria" aria-hidden="true"></span>
+      <time class="relogio" id="relogio"></time>
     </div>
   </header>
 
@@ -425,6 +426,23 @@
       window.addEventListener('resize', function () {
         janelas.forEach(function (j) { if (!j.hidden) posicionar(j); });
       });
+
+      // Relógio da barra, como no Mac: dia da semana, data e hora de quem está lendo.
+      var relogio = document.getElementById('relogio');
+      if (relogio) {
+        var diaSem = ['dom', 'seg', 'ter', 'qua', 'qui', 'sex', 'sáb'];
+        var meses = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
+        var pad = function (n) { return n < 10 ? '0' + n : '' + n; };
+        var tique = function () {
+          var d = new Date();
+          relogio.textContent = diaSem[d.getDay()] + ' ' + d.getDate() + ' ' + meses[d.getMonth()]
+            + '  ' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+          relogio.dateTime = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate())
+            + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes());
+          setTimeout(tique, (60 - d.getSeconds()) * 1000 + 50);
+        };
+        tique();
+      }
 
       // Uma âncora na URL abre a janela correspondente.
       if (location.hash) abrir(location.hash.slice(1), false);
