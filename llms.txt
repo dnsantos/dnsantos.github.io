@@ -1,10 +1,10 @@
-# Deivid Santos
+# Deívid Santos
 
 > Engenheiro de Modern Workplace em São Paulo. Administra frotas Apple corporativas desde 2019 e publica lições gratuitas em português sobre MDM, Jamf Pro, Apple Business Manager, Platform SSO, infraestrutura como código e experiência do colaborador. Conteúdo independente, sem vínculo com fabricante. O que ele descobre operando, ele escreve e publica de graça.
 
 ## Quem é
 
-- Nome: Deivid Santos. Títulos: Engenheiro de Modern Workplace, Apple Platform Engineer, AI-Native Infrastructure Engineer.
+- Nome: Deívid Santos. Títulos: Engenheiro de Modern Workplace, Apple Platform Engineer, AI-Native Infrastructure Engineer.
 - Em TI desde 2011, com dispositivos Apple corporativos desde 2019. Mais de 3.200 dispositivos gerenciados ao longo da carreira.
 - Hoje na Globo, com cerca de 2.000 Macs em Jamf Pro, Intune, Apple Business Manager e Entra ID.
 - Administrador da comunidade Brazil Apple Admins, no Jamf Community.
