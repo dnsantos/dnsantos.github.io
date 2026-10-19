@@ -4,7 +4,7 @@
 
 ## Material publicado
 
-- 12 lições em cinco trilhas, em learn.deividsantos.com.br: Fundamentos de MDM e ABM, Jamf Pro na prática, infraestrutura como código, DEX e Modern Workplace.
+- 11 lições em cinco trilhas, em learn.deividsantos.com.br: Fundamentos de MDM e ABM, Jamf Pro na prática, infraestrutura como código, DEX e Modern Workplace.
 - Caminhos de leitura por situação: montar uma frota do zero, herdar um Jamf Pro, tirar a configuração do console e mostrar que a frota funciona.
 
 ## Da prática
